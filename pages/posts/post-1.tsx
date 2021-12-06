@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import Layout from '@components/layout'
 
 export default function FirstPost() {
     return (
-        <Layout>
+        <>
             <Head>
                 <title> First Post</title>
             </Head>
@@ -13,6 +12,6 @@ export default function FirstPost() {
                         Do something cool
                     </a>
                 </h2>
-        </Layout>
+        </>
     )
 }

@@ -12,7 +12,7 @@
         "public/*"
       ],
       "@css/*": [
-        "/styles/*"
+        "styles/*"
       ],
       "@lib/*": [
         "lib/*"
