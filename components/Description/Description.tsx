@@ -1,5 +1,5 @@
-import * as Theme from './Description.theme'
-import ScrollAnimation from 'react-animate-on-scroll'
+import * as Theme from './Description.theme';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 const DescriptionComponenet = () => {
@@ -12,7 +12,7 @@ const DescriptionComponenet = () => {
         'Node',
         'React.js/Next.js',
         'Neural Networks (DNN, CNN, RNN)'
-    ]
+    ];
 
     return (
         <Theme.DesContainer id='description'>
@@ -41,7 +41,7 @@ const DescriptionComponenet = () => {
 
             </Theme.DescTextContainer>
         </Theme.DesContainer>
-    )
+    );
 }
 
 export default DescriptionComponenet

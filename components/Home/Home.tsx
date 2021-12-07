@@ -1,5 +1,5 @@
-import * as Theme from './Home.theme'
-import ScrollAnimation from 'react-animate-on-scroll'
+import * as Theme from './Home.theme';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const HomeComponent = () => {
     return (
@@ -28,7 +28,7 @@ const HomeComponent = () => {
                 </ScrollAnimation>
             </Theme.IntroContainer>
         </Theme.Container>
-    )
+    );
 }
 
 export default HomeComponent

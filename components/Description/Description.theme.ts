@@ -1,4 +1,4 @@
-import { styled } from '@css/stitches.config'
+import { styled } from '@css/stitches.config';
 
 export const DesContainer = styled('div', {
     display: 'flex',

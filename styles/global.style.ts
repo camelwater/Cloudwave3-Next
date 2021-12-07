@@ -1,5 +1,5 @@
 
-import { globalCss } from '@stitches/react'
+import { globalCss } from '@stitches/react';
 
 const globalStyle = globalCss({
   '*': {
@@ -58,6 +58,6 @@ const globalStyle = globalCss({
     width: 80,
     height: 80,
   },
-})
+});
 
 export default globalStyle
