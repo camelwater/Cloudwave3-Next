@@ -1,8 +1,9 @@
 import * as Theme from './Description.theme';
 import ScrollAnimation from 'react-animate-on-scroll';
+import * as Icons from 'react-feather'
 
 
-const DescriptionComponenet = () => {
+const DescriptionComponent = () => {
     const stuff = [
         'Python',
         'Javascript',
@@ -10,9 +11,10 @@ const DescriptionComponenet = () => {
         'Rust',
         'Discord.py',
         'Node',
-        'React.js/Next.js',
+        'React/Next',
         'Neural Networks (DNN, CNN, RNN)'
     ];
+
 
     return (
         <Theme.DesContainer id='description'>
@@ -26,14 +28,15 @@ const DescriptionComponenet = () => {
                 </ScrollAnimation>
 
                 <ScrollAnimation animateIn='animate__flipInX' animateOnce={true}>
-                    <Theme.DescText>Some things I&apos;ve been working on learning and improving:</Theme.DescText>
+                    <Theme.DescText>Some things I&apos;ve been learning:</Theme.DescText>
                 </ScrollAnimation>
                 
                 <Theme.StuffContainer>
                     {stuff.map((thing, index) => (
                         <ScrollAnimation animateIn='animate__flipInX' animateOnce={true} key={index}>
                             <Theme.StuffText>
-                                - {thing}
+                                <Icons.ArrowRightCircle style={{ marginRight: 5 }} />
+                                {thing}
                             </Theme.StuffText>
                         </ScrollAnimation>
                     ))}
@@ -44,4 +47,4 @@ const DescriptionComponenet = () => {
     );
 }
 
-export default DescriptionComponenet
+export default DescriptionComponent

@@ -1,13 +1,13 @@
 import { styled } from '@css/stitches.config';
 
-export const DesContainer = styled('div', {
+export const ToolsContainer = styled('div', {
     display: 'flex',
     margin: '100px 100px',
     justifyContent: 'center',
     alignItems: 'center',
 })
 
-export const DescTextContainer = styled('div', {
+export const ToolsTextContainer = styled('div', {
     display: 'flex',
     flexDirection: 'column',
     margin: '0 100px',
@@ -16,16 +16,15 @@ export const DescTextContainer = styled('div', {
     maxWidth: '100vw',
 })
 
-export const StuffContainer = styled('div', {
+export const ToolsGrid = styled('div', {
     display: 'grid',
-    gap: '1.5rem',
-    columnGap: '2.5rem',
-    width: 400,
+    gap: '1.0rem',
+    width: 200,
     gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 0fr))',
     marginBottom: 50
 })
 
-export const DescTitleText = styled('h2', {
+export const ToolsTitle = styled('h2', {
     display: 'inline-block',
     background: '$gradient',
     width: 'fit-content',
@@ -37,19 +36,30 @@ export const DescTitleText = styled('h2', {
     margin: '60px 0'
 })
 
-export const DescText = styled('p', {
+export const ToolsInfo = styled('p', {
     fontFamily: '$main',
     color: '$white',
     fontSize: '$3',
     marginBottom: 40
 })
 
-export const StuffText = styled('div', {
+export const ToolsGridText = styled('div', {
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'row',
     fontFamily: '$main',
     color: '$white',
-    fontSize: '$3',
+    fontSize: '$2',
     width: 500
 })
+
+export const ToolsTextLink = styled('a', {
+    textDecoration: 'none',
+    color: '$white',
+    transition: '0.1s linear',
+    margin: '0 10px',
+    '&:hover': {
+      color: '$main',
+      transform: 'scale(1.1, 1.1)',
+    },
+  })

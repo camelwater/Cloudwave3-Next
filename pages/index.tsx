@@ -1,10 +1,11 @@
 import Head from 'next/head';
 // import Link from 'next/link';
 import { ContentWrapper } from '@css/stitches.config';
-import HomeComponent from '@components/Home/Home';
 import globalStyle from '@css/global.style';
 import 'animate.css/animate.min.css';
-import DescriptionComponenet from '@components/Description/Description';
+import HomeComponent from '@components/Home/Home';
+import DescriptionComponent from '@components/Description/Description';
+import ToolsComponent from '@components/Tools/Tools';
 import SmoothScroll from '@components/Scroll';
 
 const siteTitle = "Ryan Zhao";
@@ -19,7 +20,8 @@ const HomePage = () => {
       </Head>
       <SmoothScroll />
       <HomeComponent />
-      <DescriptionComponenet />
+      <DescriptionComponent />
+      <ToolsComponent />
     </ContentWrapper>
   );
 }
