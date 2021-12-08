@@ -20,8 +20,8 @@ export const NavContainer = styled('div', {
     alignItems: 'center',
     width: '65%',
     '@Flip': {
-    width: '80%',
-    justifyContent: 'space-around !important',
+        width: '80%',
+        justifyContent: 'space-around !important',
     },
     '@iPadPro': {
     width: '100vw',

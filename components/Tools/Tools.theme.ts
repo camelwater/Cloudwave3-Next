@@ -32,13 +32,11 @@ export const ToolsGrid = styled('div', {
     marginBottom: 50,
     '@iPadPro': {
         width: '100%',
-        gap: '1rem',
-        columnGap: '1.75rem',
         gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 0fr))',
     },
 })
 
-export const ToolsTitle = styled('h2', {
+export const ToolsTitle = styled('h1', {
     display: 'inline-block',
     background: '$gradient',
     width: 'fit-content',
