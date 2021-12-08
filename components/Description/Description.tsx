@@ -20,15 +20,15 @@ const DescriptionComponent = () => {
         <Theme.DesContainer id='description'>
             <Theme.DescTextContainer>
                 <ScrollAnimation animateIn='animate__bounceInRight' animateOnce={true}>
-                    <Theme.DescTitleText>Who?</Theme.DescTitleText>
+                    <Theme.DescTitleText>???</Theme.DescTitleText>
                 </ScrollAnimation>
 
                 <ScrollAnimation animateIn='animate__bounceInUp' animateOnce={true}>
-                    <Theme.DescText>I&apos;m Ryan Zhao, a high school student who&apos;s learning stuff.</Theme.DescText>
+                    <Theme.DescText>This is some filler text.</Theme.DescText>
                 </ScrollAnimation>
 
                 <ScrollAnimation animateIn='animate__flipInX' animateOnce={true}>
-                    <Theme.DescText>Some things I&apos;ve been learning:</Theme.DescText>
+                    <Theme.DescText>This is a sort of cool-looking list:</Theme.DescText>
                 </ScrollAnimation>
                 
                 <Theme.StuffContainer>

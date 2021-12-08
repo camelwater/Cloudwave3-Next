@@ -55,9 +55,9 @@ const ToolsComponent = () => {
                     animateOut='animate__flipOutX'
                     animateOnce={false}
                 >
-                    <Theme.ToolsInfo>
+                    {/* <Theme.ToolsInfo>
                         This webpage was built using:
-                    </Theme.ToolsInfo>
+                    </Theme.ToolsInfo> */}
                 </ScrollAnimation>
 
                 <Theme.ToolsGrid>

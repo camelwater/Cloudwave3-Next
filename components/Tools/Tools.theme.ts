@@ -33,7 +33,7 @@ export const ToolsTitle = styled('h2', {
     WebkitTextFillColor: 'transparent',
     fontSize: '$5',
     fontFamily: '$main',
-    margin: '60px 0'
+    margin: '45px 0'
 })
 
 export const ToolsInfo = styled('p', {
