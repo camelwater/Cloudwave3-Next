@@ -32,16 +32,17 @@ const NavigationMenu = () => {
 
     return (
         <>
+            <Theme.MenuContainer className={nav ? '' : 'disabled'} onClick={ToggleNav}>
+                <Theme.Menu>
+                    {Links.map((entry, index) => (
+                        <Link href={entry.link} key={index} passHref={true}>
+                            <Theme.MenuLink>{entry.name}</Theme.MenuLink>
+                        </Link>
+                    ))}
+                </Theme.Menu>
+            </Theme.MenuContainer>
+
             <Theme.Nav>
-                <Theme.MenuContainer className={nav ? '' : 'disabled'} onClick={ToggleNav}>
-                    <Theme.Menu>
-                        {Links.map((entry, index) => (
-                            <Link href={entry.link} key={index} passHref={true}>
-                                <Theme.MenuLink>{entry.name}</Theme.MenuLink>
-                            </Link>
-                        ))}
-                    </Theme.Menu>
-                </Theme.MenuContainer>
                 <Theme.NavContainer>
                     <Theme.TitleLinkText href='/'>cloudwave3</Theme.TitleLinkText>
                         <Theme.NavLinks>

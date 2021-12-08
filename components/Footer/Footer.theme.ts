@@ -11,6 +11,7 @@ export const Footer = styled('div', {
     '@iPadPro': {
       flexDirection: 'column',
       justifyContent: 'center',
+      margin: 25
     },
 })
 
