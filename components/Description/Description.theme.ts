@@ -30,10 +30,16 @@ export const StuffContainer = styled('div', {
     columnGap: '2.5rem',
     width: 400,
     gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 0fr))',
-    marginBottom: 50
+    marginBottom: 50,
+    '@iPadPro': {
+        width: '100%',
+        gap: '1rem',
+        columnGap: '1.75rem',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 0fr))',
+    },
 })
 
-export const DescTitleText = styled('h2', {
+export const DescTitleText = styled('h1', {
     display: 'inline-block',
     background: '$gradient',
     width: 'fit-content',
@@ -49,7 +55,11 @@ export const DescText = styled('p', {
     fontFamily: '$main',
     color: '$white',
     fontSize: '$3',
-    marginBottom: 40
+    marginBottom: 40,
+    '@iPadPro': {
+        width: '100%',
+        fontSize: '$2',
+    },
 })
 
 export const StuffText = styled('div', {
@@ -59,5 +69,8 @@ export const StuffText = styled('div', {
     fontFamily: '$main',
     color: '$white',
     fontSize: '$3',
-    width: 500
+    width: 350,
+    '@iPadPro': {
+        font: '$2',
+    },
 })

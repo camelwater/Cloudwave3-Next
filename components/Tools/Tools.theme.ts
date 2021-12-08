@@ -5,6 +5,9 @@ export const ToolsContainer = styled('div', {
     margin: '100px 100px',
     justifyContent: 'center',
     alignItems: 'center',
+    '@iPadPro': {
+        margin: '100px 0',
+      },
 })
 
 export const ToolsTextContainer = styled('div', {
@@ -14,6 +17,11 @@ export const ToolsTextContainer = styled('div', {
     width: 600,
     marginRight: 400,
     maxWidth: '100vw',
+    '@iPadPro': {
+        margin: '0 30px',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
 })
 
 export const ToolsGrid = styled('div', {
@@ -21,7 +29,13 @@ export const ToolsGrid = styled('div', {
     gap: '1.0rem',
     width: 200,
     gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 0fr))',
-    marginBottom: 50
+    marginBottom: 50,
+    '@iPadPro': {
+        width: '100%',
+        gap: '1rem',
+        columnGap: '1.75rem',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 0fr))',
+    },
 })
 
 export const ToolsTitle = styled('h2', {
@@ -50,7 +64,10 @@ export const ToolsGridText = styled('div', {
     fontFamily: '$main',
     color: '$white',
     fontSize: '$2',
-    width: 500
+    width: 150,
+    '@iPadPro': {
+        font: '$2'
+    }
 })
 
 export const ToolsTextLink = styled('a', {
