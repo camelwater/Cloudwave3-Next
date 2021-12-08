@@ -34,6 +34,7 @@ export const StuffContainer = styled('div', {
     '@iPadPro': {
         width: '50%',
         justifyContent: 'left',
+        alignItems: 'left',
         gap: '1.0rem',
         columnGap: '1.75rem',
         gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 0fr))',
