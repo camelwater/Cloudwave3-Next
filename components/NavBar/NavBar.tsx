@@ -2,6 +2,7 @@ import Link from 'next/link';
 import * as Theme from './Navbar.theme';
 import React from 'react';
 import * as Icons from 'react-feather';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const NavigationMenu = () => {
 
@@ -33,13 +34,15 @@ const NavigationMenu = () => {
     return (
         <>
             <Theme.MenuContainer className={nav ? '' : 'disabled'} onClick={ToggleNav}>
-                <Theme.Menu>
-                    {Links.map((entry, index) => (
-                        <Link href={entry.link} key={index} passHref={true}>
-                            <Theme.MenuLink>{entry.name}</Theme.MenuLink>
-                        </Link>
-                    ))}
-                </Theme.Menu>
+                <ScrollAnimation animateIn='animate__fadeInDown' animateOut='animate__fadeOutDown'>
+                    <Theme.Menu>
+                        {Links.map((entry, index) => (
+                            <Link href={entry.link} key={index} passHref={true}>
+                                <Theme.MenuLink>{entry.name}</Theme.MenuLink>
+                            </Link>
+                        ))}
+                    </Theme.Menu>
+                </ScrollAnimation>
             </Theme.MenuContainer>
 
             <Theme.Nav>
