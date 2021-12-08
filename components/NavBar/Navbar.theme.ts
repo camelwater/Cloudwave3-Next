@@ -18,9 +18,9 @@ export const NavContainer = styled('div', {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: '70%',
+    width: '65%',
     '@Flip': {
-    width: '85%',
+    width: '80%',
     justifyContent: 'space-around !important',
     },
     '@iPadPro': {
@@ -29,10 +29,17 @@ export const NavContainer = styled('div', {
     },
 })
 
-export const NavText = styled('p', {
+export const TitleLinkText = styled('a', {
     fontFamily: '$mono',
     fontSize: '$4',
     color: '$main',
+    marginLeft: 50,
+    textDecoration: 'none',
+    transition: '0.1s linear',
+    '&:hover': {
+        color: '$white',
+        transform: 'scale(1.1, 1.1)'
+    },
     '@Flip': {
       fontSize: '$2',
       display: 'flex !important',

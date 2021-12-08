@@ -5,6 +5,9 @@ export const DesContainer = styled('div', {
     margin: '100px 100px',
     justifyContent: 'center',
     alignItems: 'center',
+    '@iPadPro': {
+        margin: '100px 0',
+      },
 })
 
 export const DescTextContainer = styled('div', {
@@ -14,6 +17,11 @@ export const DescTextContainer = styled('div', {
     width: 600,
     marginRight: 400,
     maxWidth: '100vw',
+    '@iPadPro': {
+        margin: '0 30px',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
 })
 
 export const StuffContainer = styled('div', {

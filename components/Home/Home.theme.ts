@@ -9,13 +9,13 @@ export const Container = styled('div', {
     width: '100vw',
     maxHeight: 1280,
     '@media only screen and (min-width: 3000px)': {
-      height: '100vh',
+      height: '120vh',
     },
     '@media only screen and (max-width: 1800px)': {
-      height: '85vh',
+      height: '90vh',
     },
     '@media only screen and (max-width: 1280px)': {
-      height: '75vh',
+      height: '120vh',
     },
   })
 

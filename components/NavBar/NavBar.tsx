@@ -13,10 +13,6 @@ const NavigationMenu = () => {
 
     const Links = [
         {
-            name: 'Home',
-            link: '/'
-        },
-        {
             name: 'Services',
             link: '/services'
         },
@@ -47,7 +43,7 @@ const NavigationMenu = () => {
                     </Theme.Menu>
                 </Theme.MenuContainer>
                 <Theme.NavContainer>
-                    <Theme.NavText>cloudwave3</Theme.NavText>
+                    <Theme.TitleLinkText href='/'>cloudwave3</Theme.TitleLinkText>
                         <Theme.NavLinks>
                             {Links.map((entry, index) => (
                                 <Link href={entry.link} key={index} passHref={true}>

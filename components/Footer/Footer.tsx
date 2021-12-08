@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Icons from 'react-feather';
-import * as Theme from './Footer.style'
+import * as Theme from './Footer.theme'
 
 const FooterComponent = () => {
 
