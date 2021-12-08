@@ -1,8 +1,9 @@
 import * as Theme from './Tools.theme';
 import * as Icons from 'react-feather';
 import ScrollAnimation from 'react-animate-on-scroll';
+import React from 'react';
 
-const ToolsComponent = () => {
+const ToolsComponent: React.FC = () => {
     
     const tools = [
         {
@@ -44,8 +45,7 @@ const ToolsComponent = () => {
             <Theme.ToolsTextContainer>
                 <ScrollAnimation 
                     animateIn='animate__bounceInRight' 
-                    animateOut='animate__bounceOutRight' 
-                    animateOnce={false}
+                    animateOnce={true}
                 >
                     <Theme.ToolsTitle>Built with</Theme.ToolsTitle>
                 </ScrollAnimation>

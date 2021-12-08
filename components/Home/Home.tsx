@@ -1,7 +1,8 @@
 import * as Theme from './Home.theme';
 import ScrollAnimation from 'react-animate-on-scroll';
+import React from 'react';
 
-const HomeComponent = () => {
+const HomeComponent: React.FC = () => {
     return (
         <Theme.Container id='home'>
             <Theme.IntroContainer>

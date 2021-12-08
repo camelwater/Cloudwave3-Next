@@ -28,17 +28,21 @@ export const StuffContainer = styled('div', {
     display: 'grid',
     gap: '1.5rem',
     columnGap: '2.5rem',
-    width: 350,
+    width: 400,
     gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 0fr))',
     marginBottom: 50,
     '@iPadPro': {
-        width: '50%',
-        justifyContent: 'left',
-        alignItems: 'left',
+        width: '100%',
         gap: '1.0rem',
-        columnGap: '1.75rem',
+        columnGap:'0rem',
         gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 0fr))',
-    },
+    }, 
+    '@Flip': {
+        width: '100%',
+        gap: '1rem',
+        columnGap: '0rem',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 0fr))',
+    }
 })
 
 export const DescTitleText = styled('h1', {
@@ -66,6 +70,8 @@ export const DescText = styled('p', {
 
 export const StuffText = styled('div', {
     display: 'flex',
+    // wordWrap: 'break-word',
+    justifyContent: 'left',
     alignItems: 'center',
     flexDirection: 'row',
     fontFamily: '$main',
@@ -74,5 +80,6 @@ export const StuffText = styled('div', {
     width: 350,
     '@iPadPro': {
         font: '$2',
+        width: 250
     },
 })

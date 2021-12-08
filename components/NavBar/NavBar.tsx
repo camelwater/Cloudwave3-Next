@@ -2,14 +2,15 @@ import Link from 'next/link';
 import * as Theme from './Navbar.theme';
 import React from 'react';
 import * as Icons from 'react-feather';
-import ScrollAnimation from 'react-animate-on-scroll';
+import { CSSTransition } from 'react-transition-group';
 
-const NavigationMenu = () => {
+const NavigationMenu: React.FC = () => {
 
     const [nav, setNav] = React.useState<boolean>(false)
 
     const ToggleNav = () => {
         setNav((prevState) => !prevState)
+        // setNav(!nav);
     }
 
     const Links = [
@@ -33,8 +34,11 @@ const NavigationMenu = () => {
 
     return (
         <>
-            <Theme.MenuContainer className={nav ? '' : 'disabled'} onClick={ToggleNav}>
-                <ScrollAnimation animateIn='animate__fadeInDown' animateOut='animate__fadeOutDown' animatePreScroll={true}>
+            {nav && (
+                <Theme.MenuContainer />
+            )}
+            <CSSTransition in={nav} timeout={300} classNames="menu" unmountOnExit>
+                <Theme.ProxyMenuContainer onClick={ToggleNav}>
                     <Theme.Menu>
                         {Links.map((entry, index) => (
                             <Link href={entry.link} key={index} passHref={true}>
@@ -42,8 +46,8 @@ const NavigationMenu = () => {
                             </Link>
                         ))}
                     </Theme.Menu>
-                </ScrollAnimation>
-            </Theme.MenuContainer>
+                </Theme.ProxyMenuContainer>
+            </CSSTransition>
 
             <Theme.Nav>
                 <Theme.NavContainer>
@@ -61,7 +65,7 @@ const NavigationMenu = () => {
                 </Theme.NavContainer>
             </Theme.Nav>
         </>
-    )
+    );
 }
 
 export default NavigationMenu

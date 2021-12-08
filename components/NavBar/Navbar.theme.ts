@@ -24,8 +24,8 @@ export const NavContainer = styled('div', {
         justifyContent: 'space-around !important',
     },
     '@iPadPro': {
-    width: '100vw',
-    justifyContent: 'center',
+        width: '100vw',
+        justifyContent: 'center',
     },
 })
 
@@ -47,9 +47,9 @@ export const TitleLinkText = styled('a', {
     '@iPhoneSE': {
       fontSize: '$1',
     },
-    '@iPadPro': {
-      display: 'none',
-    },
+    // '@iPadPro': {
+    //   display: 'none',
+    // },
   })
 
 export const NavLinks = styled('div', {
@@ -68,26 +68,41 @@ export const NavLink = styled('a', {
     '&:hover': {
         color: '$white',
     },
+    '@iPad': {
+        margin: '0 10px'
+    }
 })
 
 
 // mobile
 export const MenuContainer = styled('div', {
-    zIndex: 999999,
+    zIndex: 9999,
     position: 'fixed',
-    height: '100vh',
-    width: '100vw',
+    top: 0,
+    height: '100%',
+    width: '100%',
     background: '#2A2A2A90',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-  })
+})
+
+export const ProxyMenuContainer = styled('div', {
+    zIndex: 99999,
+    position: 'fixed',
+    top: 0,
+    height: '100vh',
+    width: '100vw',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+})
 
 export const Menu = styled('div', {
     width: 280,
     height: 300,
     background: '$primary',
-    zIndex: 9999999,
+    zIndex: 999999,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -101,7 +116,7 @@ export const MenuButton = styled('button', {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    '@media only screen and (min-width: 600px)': {
+    '@media only screen and (min-width: 601px)': {
       display: 'none',
     },
 })

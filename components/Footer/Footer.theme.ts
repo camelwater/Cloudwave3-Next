@@ -31,6 +31,9 @@ export const LinkText = styled('a', {
     '&:hover': {
         color: '$white',
         transform: 'scale(1.05, 1.05)'
+    },  
+    '@iPhone': {
+        fontSize: 10
     }
 })
 

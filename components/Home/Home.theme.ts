@@ -9,13 +9,13 @@ export const Container = styled('div', {
     width: '100vw',
     maxHeight: 1280,
     '@media only screen and (min-width: 3000px)': {
-      height: '110vh',
+      height: '100vh',
     },
     '@media only screen and (max-width: 1800px)': {
       height: '90vh',
     },
     '@media only screen and (max-width: 1280px)': {
-      height: '75vh',
+      height: '90vh',
     },
   })
 
@@ -43,6 +43,9 @@ export const Container = styled('div', {
         },
       },
     },
+    '@iPhone': {
+        fontSize: '$3'
+    }
   })
 
 export const NameText = styled('h1', {
@@ -50,6 +53,13 @@ export const NameText = styled('h1', {
     width: 'fit-content',
     fontFamily: '$main',
     color: '$white',
-    fontSize: 60,
+    fontSize: 75,
     margin: '30px 0',
+
+    '@iPhonePlus': {
+        fontSize: 60
+    },
+    '@iPhone': {
+        fontSize: 50
+    }
 })
