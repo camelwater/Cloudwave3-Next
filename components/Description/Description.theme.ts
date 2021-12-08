@@ -32,7 +32,7 @@ export const StuffContainer = styled('div', {
     gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 0fr))',
     marginBottom: 50,
     '@iPadPro': {
-        width: '85%',
+        width: 100,
         gap: '1.0rem',
         columnGap: '1.75rem',
         gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 0fr))',
