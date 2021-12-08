@@ -34,7 +34,7 @@ const NavigationMenu = () => {
     return (
         <>
             <Theme.MenuContainer className={nav ? '' : 'disabled'} onClick={ToggleNav}>
-                <ScrollAnimation animateIn='animate__fadeInDown' animateOut='animate__fadeOutDown'>
+                <ScrollAnimation animateIn='animate__fadeInDown' animateOut='animate__fadeOutDown' animatePreScroll={true}>
                     <Theme.Menu>
                         {Links.map((entry, index) => (
                             <Link href={entry.link} key={index} passHref={true}>
