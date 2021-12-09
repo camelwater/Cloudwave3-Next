@@ -19,7 +19,10 @@
       ],
       "@pages/*": [
         "pages/*"
-      ]
+      ],
+      "@content/*": [
+        "content/*"
+      ],
     },
     "target": "es6",
     "lib": [

@@ -6,7 +6,9 @@ export const Footer = styled('div', {
     alignItems: 'center',
     zIndex: 999,
     '@media only screen and (min-width: 1024px)': {
-      margin: 50,
+      marginRight: 25,
+      marginLeft: 25,
+      marginBottom: 15
     },
     '@iPadPro': {
       flexDirection: 'column',

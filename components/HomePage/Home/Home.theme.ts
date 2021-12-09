@@ -56,7 +56,7 @@ export const NameText = styled('h1', {
     fontSize: 75,
     margin: '30px 0',
 
-    '@iPhonePlus': {
+    '@media only screen and (max-width: 425px)': {
         fontSize: 60
     },
     '@iPhone': {
