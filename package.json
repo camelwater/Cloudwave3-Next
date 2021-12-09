@@ -10,6 +10,7 @@
   "dependencies": {
     "@stitches/react": "^1.2.6",
     "@types/react-animate-on-scroll": "^2.1.5",
+    "react-animate-on-scroll": "^2.1.5",
     "animate.css": "^4.1.1",
     "next": "latest",
     "react": "17.0.2",
