@@ -1,10 +1,9 @@
 import React from 'react';
 import * as Theme from './About.theme';
 import ScrollAnimation from 'react-animate-on-scroll';
-import * as Content from '@content/AboutContent';
+import ReactMarkdown from 'react-markdown';
 
-
-const AboutComponent: React.FC = () => {
+const AboutComponent: React.FC<{ contentData: string }> = ({ contentData }) => {
 
     return (
         <Theme.AboutContainer>
@@ -13,11 +12,11 @@ const AboutComponent: React.FC = () => {
                     <Theme.TitleText>About us</Theme.TitleText>
                 </ScrollAnimation>
                 <ScrollAnimation animateIn='animate__zoomIn' animateOnce={true} delay={500}>
-                    {Content.content.map((text, index) => (
-                        <Theme.AboutText key={index}>
-                            {text}
+                        <Theme.AboutText>
+                            <ReactMarkdown>
+                                {contentData}
+                            </ReactMarkdown>
                         </Theme.AboutText>
-                    ))}
                 </ScrollAnimation>
             </Theme.AboutTextContainer>
         </Theme.AboutContainer>

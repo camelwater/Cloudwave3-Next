@@ -4,13 +4,14 @@ import { ContentWrapper } from '@css/stitches.config';
 import globalStyle from '@css/global.style';
 import 'animate.css/animate.min.css';
 import SmoothScroll from '@components/Scroll';
-// import * as Content from '@content/ServicesContent';
 import NavigationComponent from '@components/NavBar/Navigation';
 import FooterComponent from '@components/Footer/Footer';
 import AboutComponent from '@components/AboutPage/About/AboutComponent';
+import { getMdContent } from '@lib/mdContent';
 
 
-const AboutPage: React.FC = () => {
+
+const AboutPage: React.FC<{ contentData: string }> = ({ contentData }) => {
     globalStyle();
 
     return (
@@ -20,10 +21,17 @@ const AboutPage: React.FC = () => {
             </Head>
             <SmoothScroll />
             <NavigationComponent />
-            <AboutComponent />
+            <AboutComponent contentData={contentData}/>
             <FooterComponent />
         </ContentWrapper>
     );
+}
+
+export const getStaticProps = async () => {
+    const contentData = getMdContent('About');
+    return {
+        props: { contentData },
+    }
 }
 
 export default AboutPage

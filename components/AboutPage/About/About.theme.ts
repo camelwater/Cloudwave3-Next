@@ -37,7 +37,7 @@ export const TitleText = styled('h1', {
     alignText: 'center'
 })
 
-export const AboutText = styled('p', {
+export const AboutText = styled('article', {
     fontFamily: '$main',
     color: '$white',
     fontSize: '$3',
