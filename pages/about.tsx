@@ -10,8 +10,7 @@ import AboutComponent from '@components/AboutPage/About/AboutComponent';
 import { getMdContent } from '@lib/mdContent';
 
 
-
-const AboutPage: React.FC<{ contentData: string }> = ({ contentData }) => {
+const AboutPage: React.FC<{ mdContent: string }> = ({ mdContent }) => {
     globalStyle();
 
     return (
@@ -21,17 +20,17 @@ const AboutPage: React.FC<{ contentData: string }> = ({ contentData }) => {
             </Head>
             <SmoothScroll />
             <NavigationComponent />
-            <AboutComponent contentData={contentData}/>
+            <AboutComponent contentData={ mdContent }/>
             <FooterComponent />
         </ContentWrapper>
     );
 }
 
-export const getStaticProps = async () => {
-    const contentData = getMdContent('About');
+export async function getStaticProps () {
+    const mdContent = getMdContent('About');
     return {
-        props: { contentData },
-    }
+        props: { mdContent }
+    };
 }
 
 export default AboutPage

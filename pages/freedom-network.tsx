@@ -6,10 +6,11 @@ import 'animate.css/animate.min.css';
 import SmoothScroll from '@components/Scroll';
 import NavigationComponent from '@components/NavBar/Navigation';
 import FooterComponent from '@components/Footer/Footer';
-import HomeComponent from '@components/HomePage/Home/Home';
+import { getMdContent } from '@lib/mdContent';
+import NetworkComponent from '@components/FreedomPage/Network';
 
 
-const FreedomNetworkPage: React.FC = () => {
+const FreedomNetworkPage: React.FC<{ mdContent: string }> = ({ mdContent }) => {
     globalStyle();
 
     return (
@@ -19,11 +20,19 @@ const FreedomNetworkPage: React.FC = () => {
             </Head>
             <SmoothScroll />
             <NavigationComponent />
-            <HomeComponent />
+            <NetworkComponent mdContent={mdContent}/>
             <FooterComponent />
         </ContentWrapper>
 
     );
+}
+
+export async function getStaticProps () {
+    return { 
+        props: {
+            mdContent: getMdContent('Freedom')
+        }
+    };
 }
 
 export default FreedomNetworkPage

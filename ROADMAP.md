@@ -4,11 +4,11 @@
 [x] - Home page
 [] - Services page
 [] - Solutions page
-[] - FN page
+[x] - FN page
 [x] - About page
 [] - Contact page
 [] - TOS + Privacy pages
-[] - Markdown files for content of individual pages
+[x] - Markdown files for content of individual pages
 
 ## Version 0.2
 [] - Hover drop-down sub-menus for desktop

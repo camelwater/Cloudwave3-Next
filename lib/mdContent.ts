@@ -1,7 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-
 const contentDir = path.join(process.cwd(), 'content');
 
 export const getMdContent = (pageName) => {

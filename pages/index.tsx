@@ -8,9 +8,6 @@ import ToolsComponent from '@components/HomePage/Tools/Tools';
 import NavigationComponent from '@components/NavBar/Navigation';
 import FooterComponent from '@components/Footer/Footer';
 import SmoothScroll from '@components/Scroll';
-// import * as Content from '@content/HomeContent';
-import AboutComponent from '@components/AboutPage/About/AboutComponent';
-
 
 const HomePage: React.FC = () => {
   globalStyle();

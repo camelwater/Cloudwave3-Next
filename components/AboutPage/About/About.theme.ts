@@ -10,19 +10,6 @@ export const AboutContainer = styled('div', {
       },
 })
 
-export const AboutTextContainer = styled('div', {
-    display: 'flex',
-    flexDirection: 'column',
-    margin: '0 100px',
-    width: 1000,
-    maxWidth: '100vw',
-    '@iPadPro': {
-        width: '80%',
-        margin: '0 30px',
-        justifyContent: 'center',
-        alignItems: 'center',   
-      },
-})
 
 export const TitleText = styled('h1', {
     display: 'inline-block',
@@ -37,13 +24,37 @@ export const TitleText = styled('h1', {
     alignText: 'center'
 })
 
-export const AboutText = styled('article', {
-    fontFamily: '$main',
+// export const AboutText = styled('p', {
+//     fontFamily: '$main',
+//     color: '$white',
+//     fontSize: '$3',
+//     marginBottom: 40,
+//     '@iPadPro': {
+//         width: '100%',
+//         fontSize: '$2',
+//     },
+// })
+
+export const AboutTextContainer = styled('div', {
+    display: 'flex',
+    flexDirection: 'column',
     color: '$white',
-    fontSize: '$3',
-    marginBottom: 40,
+    margin: '0 100px',
+    width: 900,
+    maxWidth: '100vw',
     '@iPadPro': {
-        width: '100%',
-        fontSize: '$2',
-    },
+        width: '80%',
+        margin: '0 30px',
+        justifyContent: 'center',
+        alignItems: 'center',   
+      },
+
+    p: {
+        fontSize: '$3',
+        marginBottom: 40,
+        '@iPadPro': {
+            width: '100%',
+            fontSize: '$2',
+        },
+    }
 })
