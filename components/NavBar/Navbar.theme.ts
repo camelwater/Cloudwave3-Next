@@ -19,7 +19,7 @@ export const NavContainer = styled('div', {
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '65%',
-    '@Flip': {
+    '@media only screen and (max-width: 650px)': {
         width: '80%',
         justifyContent: 'space-around !important',
     },
@@ -35,26 +35,23 @@ export const TitleLinkText = styled('a', {
     color: '$main',
     marginLeft: 50,
     textDecoration: 'none',
-    transition: '0.1s linear',
+    transition: '0.2s linear',
     '&:hover': {
         color: '$white',
         transform: 'scale(1.1, 1.1)'
     },
     '@Flip': {
-      fontSize: '$2',
+    //   fontSize: '$2',
       display: 'flex !important',
     },
     '@iPhoneSE': {
-      fontSize: '$1',
+      fontSize: '$2',
     },
-    // '@iPadPro': {
-    //   display: 'none',
-    // },
   })
 
 export const NavLinks = styled('div', {
     display: 'flex',
-    '@Flip': {
+    '@media only screen and (max-width: 650px)': {
         display: 'none',
     },
 })
@@ -65,6 +62,7 @@ export const NavLink = styled('a', {
     textDecoration: 'none',
     margin: '0 15px',
     fontFamily: '$main',
+    transition: '0.25s linear',
     '&:hover': {
         color: '$white',
     },

@@ -6,7 +6,7 @@ import 'animate.css/animate.min.css';
 import SmoothScroll from '@components/Scroll';
 import NavigationComponent from '@components/NavBar/Navigation';
 import FooterComponent from '@components/Footer/Footer';
-import { getMdContent } from '@lib/mdContent';
+import { getMdContent } from '@lib/readMd';
 import NetworkComponent from '@components/FreedomPage/Network';
 
 
@@ -30,7 +30,7 @@ const FreedomNetworkPage: React.FC<{ mdContent: string }> = ({ mdContent }) => {
 export async function getStaticProps () {
     return { 
         props: {
-            mdContent: getMdContent('Freedom')
+            mdContent: getMdContent('FreedomContent')
         }
     };
 }

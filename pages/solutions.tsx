@@ -6,10 +6,11 @@ import 'animate.css/animate.min.css';
 import SmoothScroll from '@components/Scroll';
 import NavigationComponent from '@components/NavBar/Navigation';
 import FooterComponent from '@components/Footer/Footer';
-import HomeComponent from '@components/HomePage/Home/Home';
+import SolutionComponent from '@components/SolutionsPage/SolutionsComponent';
+import { getBlockContent } from '@lib/readMd';
 
 
-const SolutionsPage: React.FC = () => {
+const SolutionsPage: React.FC<{ contentData }> = ({ contentData }) => {
     globalStyle();
 
     return (
@@ -19,11 +20,20 @@ const SolutionsPage: React.FC = () => {
             </Head>
             <SmoothScroll />
             <NavigationComponent />
-            <HomeComponent />
+            <SolutionComponent contentData={contentData}/>
             <FooterComponent />
         </ContentWrapper>
 
     );
+}
+
+export async function getStaticProps () {
+    const contentData = getBlockContent('Solutions');
+    return {
+        props: {
+            contentData
+        },
+    };
 }
 
 export default SolutionsPage

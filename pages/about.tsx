@@ -7,7 +7,7 @@ import SmoothScroll from '@components/Scroll';
 import NavigationComponent from '@components/NavBar/Navigation';
 import FooterComponent from '@components/Footer/Footer';
 import AboutComponent from '@components/AboutPage/About/AboutComponent';
-import { getMdContent } from '@lib/mdContent';
+import { getMdContent } from '@lib/readMd';
 
 
 const AboutPage: React.FC<{ mdContent: string }> = ({ mdContent }) => {
@@ -27,7 +27,7 @@ const AboutPage: React.FC<{ mdContent: string }> = ({ mdContent }) => {
 }
 
 export async function getStaticProps () {
-    const mdContent = getMdContent('About');
+    const mdContent = getMdContent('AboutContent');
     return {
         props: { mdContent }
     };

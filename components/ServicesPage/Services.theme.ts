@@ -1,7 +1,8 @@
 import { styled } from '@css/stitches.config';
 
-export const NetworkContainer = styled('div', {
+export const Container = styled('div', {
     display: 'flex',
+    flexDirection: 'column',
     margin: '100px 100px',
     justifyContent: 'center',
     alignItems: 'center',
@@ -10,19 +11,33 @@ export const NetworkContainer = styled('div', {
       },
 })
 
-// export const TitleContainer = styled('div', {
-//     display: 'flex',
-//     flexDirection: 'column',
-//     margin: '0 100px',
-//     width: 1000,
-//     maxWidth: '100vw',
-//     '@iPadPro': {
-//         width: '80%',
-//         margin: '0 30px',
-//         justifyContent: 'center',
-//         alignItems: 'center',   
-//       },
-// })
+export const ServiceContainer = styled('div', {
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: 400,
+    width: '100%',
+    maxWidth: '100vw',
+    '@iPadPro': {
+        margin: '0 30px',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+})
+
+export const ServiceContentContainer = styled('div', {
+    display: 'flex',
+    flexDirection: 'row',
+    margin: '0 -100px',
+    // marginTop: -100,
+    // width: 1000,
+    width: '100%',
+    maxWidth: '100vw',
+    '@iPadPro': {
+        margin: '0 30px',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+})
 
 export const TitleText = styled('h1', {
     display: 'inline-block',
@@ -31,11 +46,20 @@ export const TitleText = styled('h1', {
     backgroundClip: 'text',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
-    fontSize: '$5',
+    fontSize: '$6',
     fontFamily: '$main',
     margin: '60px 0',
     alignText: 'center'
 })
+
+export const ImgBox = styled('div', {
+    display: 'flex',
+    position: 'absolute',
+    width: 300,
+    '@media only screen and (max-width: 1350px)': {
+      display: 'none',
+    },
+  })
 
 export const mdContentContainer = styled('div', {
 
@@ -43,10 +67,11 @@ export const mdContentContainer = styled('div', {
     display: 'flex',
     flexDirection: 'column',
     margin: '50px 100px',
-    width: 1000,
-    maxWidth: '100vw',
+    width: '100%',
+    maxWidth: '35vw',
     '@iPadPro': {
-        width: '80%',
+        width: '100%',
+        maxWidth: '50vw',
         margin: '0 30px',
         justifyContent: 'center',
         alignItems: 'center',   
@@ -62,7 +87,7 @@ export const mdContentContainer = styled('div', {
         backgroundClip: 'text',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
-        fontSize: '$5',
+        fontSize: '$6',
         fontFamily: '$main',
         // margin: '60px 0',
         alignText: 'center'
@@ -70,7 +95,13 @@ export const mdContentContainer = styled('div', {
     h2: {
         marginTop: 100,
         marginBottom: 30,
-        color: '$main2',
+        color: 'GoldenRod',
+        fontSize: '$5'
+    },
+    h3: {
+        marginTop: 35,
+        marginBottom: 25,
+        color: '$white',
         fontSize: '$4'
     },
     pre: {
@@ -82,6 +113,7 @@ export const mdContentContainer = styled('div', {
     },
     code: {},
     p: {
+        color: '$main2',
         fontSize: '$3',
         margin: '10px 0',
     },

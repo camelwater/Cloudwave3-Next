@@ -7,9 +7,10 @@ import SmoothScroll from '@components/Scroll';
 import NavigationComponent from '@components/NavBar/Navigation';
 import FooterComponent from '@components/Footer/Footer';
 import HomeComponent from '@components/HomePage/Home/Home';
+import ServiceComponent from '@components/ServicesPage/ServicesComponent';
+import { getBlockContent } from '@lib/readMd'
 
-
-const ServicesPage: React.FC = () => {
+const ServicesPage: React.FC<{ contentData: [] }> = ({ contentData }) => {
     globalStyle();
 
     return (
@@ -19,11 +20,20 @@ const ServicesPage: React.FC = () => {
             </Head>
             <SmoothScroll />
             <NavigationComponent />
-            <HomeComponent />
+            <ServiceComponent contentData={contentData} />
             <FooterComponent />
         </ContentWrapper>
 
     );
+}
+
+export async function getStaticProps () {
+    const contentData = getBlockContent('Services');
+    return {
+        props: {
+            contentData,
+        },
+    };
 }
 
 export default ServicesPage

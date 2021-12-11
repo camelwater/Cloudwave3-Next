@@ -10,14 +10,14 @@ const NetworkComponent: React.FC<{ mdContent: string }> = ({ mdContent }) => {
             <Theme.mdContentContainer>
                 <ScrollAnimation
                         animateIn='animate__bounceInRight'
-                        animateOnce={false}
+                        animateOnce={true}
                     >
                     <Theme.TitleText>Freedom Network: A Metaverse Prototype</Theme.TitleText>
                 </ScrollAnimation>
 
                 <ScrollAnimation
                     animateIn='animate__zoomIn'
-                    animateOnce={false}
+                    animateOnce={true}
                     delay={500}
                 >
                     <ReactMarkdown>

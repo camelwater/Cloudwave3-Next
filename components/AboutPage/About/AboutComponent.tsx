@@ -8,10 +8,10 @@ const AboutComponent: React.FC<{ contentData: string }> = ({ contentData }) => {
     return (
         <Theme.AboutContainer>
             <Theme.AboutTextContainer>
-                <ScrollAnimation animateIn='animate__bounceInRight' animateOnce={false}>
+                <ScrollAnimation animateIn='animate__bounceInRight' animateOnce={true}>
                     <Theme.TitleText>About us</Theme.TitleText>
                 </ScrollAnimation>
-                <ScrollAnimation animateIn='animate__zoomIn' animateOnce={false} delay={500}>
+                <ScrollAnimation animateIn='animate__zoomIn' animateOnce={true} delay={500}>
                     <ReactMarkdown>
                         {contentData}
                     </ReactMarkdown>

@@ -43,7 +43,12 @@ export const MenuButton = styled('button', {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    '@media only screen and (min-width: 601px)': {
+    transition: '0.5s linear',
+    '&:hover': {
+        color: 'GoldenRod',
+        transform: 'rotate(180deg)'
+    },
+    '@media only screen and (min-width: 650px)': {
       display: 'none',
     },
 })
@@ -54,4 +59,8 @@ export const MenuLink = styled('a', {
     fontSize: '$3',
     fontFamily: '$main',
     margin: '0 0 10px 30px',
+    transition: '0.25s linear',
+    '&:hover': {
+        color: 'GoldenRod'
+    }
   })
