@@ -54,8 +54,8 @@ export const TitleText = styled('h1', {
 
 export const ImgBox = styled('div', {
     display: 'flex',
-    position: 'absolute',
-    width: 300,
+    position: 'relative',
+    width: 600,
     '@media only screen and (max-width: 1350px)': {
       display: 'none',
     },
