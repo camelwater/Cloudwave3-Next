@@ -53,6 +53,7 @@ export const TitleText = styled('h1', {
 })
 
 export const ImgBox = styled('div', {
+    zIndex: 9,
     display: 'flex',
     position: 'relative',
     width: 600,
@@ -69,6 +70,7 @@ export const mdContentContainer = styled('div', {
     margin: '50px 100px',
     width: '100%',
     maxWidth: '35vw',
+    zIndex: 99,
     '@iPadPro': {
         width: '100%',
         maxWidth: '50vw',
@@ -116,6 +118,7 @@ export const mdContentContainer = styled('div', {
         color: '$main2',
         fontSize: '$3',
         margin: '10px 0',
+        zIndex: 999
     },
     img: {
         borderRadius: 10,
