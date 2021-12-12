@@ -69,7 +69,7 @@ export const mdContentContainer = styled('div', {
     flexDirection: 'column',
     margin: '50px 100px',
     width: '100%',
-    maxWidth: '50vw',
+    maxWidth: '40vw',
     zIndex: 99,
     '@iPadPro': {
         width: '100%',

@@ -35,11 +35,11 @@ const SingleSolution: React.FC<{ mdContent, title: string, img: string }> = ({ m
             <Theme.ImgBox style={{ width: 600, marginLeft: '1vw', marginTop: 250 }}>
                  {imgSrc!==null && 
                     <ParallaxProvider>
-                        <Parallax x={[-50, 25]}>
+                        <Parallax x={[-35, 35]}>
                             <Image
                                 priority
                                 src={imgSrc}
-                                height={450}
+                                height={350}
                                 width={500}
                                 alt={img}
                             />

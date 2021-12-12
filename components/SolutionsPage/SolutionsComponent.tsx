@@ -1,5 +1,5 @@
 import React from 'react';
-import SingleService from './SingleSolution';
+import SingleSolution from './SingleSolution';
 import * as Theme from './Solutions.theme';
 import ScrollAnimation from 'react-animate-on-scroll';
 
@@ -16,7 +16,7 @@ const SolutionComponent: React.FC<{ contentData }> = ({ contentData }) => {
                 </ScrollAnimation>
 
                 {contentData.map((solutionContent, index) => (
-                    <SingleService mdContent={solutionContent.content} title={solutionContent.title} img={solutionContent.img} key={index} />
+                    <SingleSolution mdContent={solutionContent.content} title={solutionContent.title} img={solutionContent.img} key={index} />
                 ))}
             </Theme.SolutionContainer>
         </Theme.Container>
