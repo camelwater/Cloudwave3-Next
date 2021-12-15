@@ -1,7 +1,7 @@
 
 .menu-enter {
     opacity: 0;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(200%, 0, 0);
 }
 
 .menu-enter-active {
@@ -17,7 +17,7 @@
 
 .menu-exit-active {
     opacity: 0;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(200%, 0, 0);
     transition: opacity 300ms, transform 300ms;
 }
 

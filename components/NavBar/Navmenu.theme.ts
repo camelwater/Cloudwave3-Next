@@ -12,7 +12,9 @@ export const MenuContainer = styled('div', {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    // filter: 'blur(8px)'
 })
+
 
 export const ProxyMenuContainer = styled('div', {
     zIndex: 99999,
@@ -26,13 +28,16 @@ export const ProxyMenuContainer = styled('div', {
 })
 
 export const Menu = styled('div', {
-    width: 280,
-    height: 300,
+    position: 'absolute',
+    right: 0,
+    width: '40vw',
+    height: '100%',
     background: '$primary',
     zIndex: 999999,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    textAlign: 'center'
 })
 
 export const MenuButton = styled('button', {
@@ -58,7 +63,7 @@ export const MenuLink = styled('a', {
     color: '$white',
     fontSize: '$3',
     fontFamily: '$main',
-    margin: '0 0 10px 30px',
+    margin: '0 10px 20px 10px',
     transition: '0.25s linear',
     '&:hover': {
         color: 'GoldenRod'
