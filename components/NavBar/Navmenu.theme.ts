@@ -31,7 +31,7 @@ export const Menu = styled('div', {
     position: 'fixed',
     right: 0,
     width: '37vw',
-    height: '100%',
+    height: '125%',
     background: '$primary',
     zIndex: 999999,
     display: 'flex',
