@@ -34,8 +34,14 @@ export const LinkText = styled('a', {
         color: '$white',
         transform: 'scale(1.05, 1.05)'
     },  
+    '@iPhonePlus': {
+        fontSize: 12
+    },
     '@iPhone': {
         fontSize: 10
+    },
+    '@iPhoneSE': {
+        fontSize: 8
     }
 })
 
@@ -47,5 +53,8 @@ export const FooterText = styled('p', {
     color: '$main',
     svg: {
         margin: '0 10px'
+    },
+    '@iPhone': {
+        fontSize: '$1'
     }
 })

@@ -8,11 +8,11 @@ export const MenuContainer = styled('div', {
     top: 0,
     height: '100%',
     width: '100%',
-    background: '#2A2A2A90',
+    // background: '#2A2A2A90',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    // filter: 'blur(8px)'
+    backdropFilter: 'blur(5px)'
 })
 
 
@@ -28,9 +28,9 @@ export const ProxyMenuContainer = styled('div', {
 })
 
 export const Menu = styled('div', {
-    position: 'absolute',
+    position: 'fixed',
     right: 0,
-    width: '40vw',
+    width: '37vw',
     height: '100%',
     background: '$primary',
     zIndex: 999999,

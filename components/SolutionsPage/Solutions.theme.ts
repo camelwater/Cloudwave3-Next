@@ -117,7 +117,7 @@ export const mdContentContainer = styled('div', {
     p: {
         color: '$main2',
         fontSize: '$3',
-        margin: '10px 0',
+        margin: '10px 0 15px 0',
     },
     img: {
         borderRadius: 10,

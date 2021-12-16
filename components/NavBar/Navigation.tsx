@@ -38,9 +38,11 @@ const NavigationComponent: React.FC = () => {
 
     return (
         <>
-            {nav && (
+            {nav && 
+                // <CSSTransition in={nav} timeout={300} classNames='bgblur' unmountOnExit>
                 <NavMenu.MenuContainer />
-            )}
+                // </CSSTransition>
+            }   
             <CSSTransition in={nav} timeout={300} classNames='menu' unmountOnExit>
                 <NavMenu.ProxyMenuContainer onClick={ToggleNav}>
                     <NavMenu.Menu>
