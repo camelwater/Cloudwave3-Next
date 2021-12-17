@@ -1,0 +1,2 @@
+*.tsx linguist-detectable=true
+*.tsx linguist-language=TypeScript
