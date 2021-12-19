@@ -16,7 +16,13 @@ const SolutionComponent: React.FC<{ contentData }> = ({ contentData }) => {
                 </ScrollAnimation>
 
                 {contentData.map((solutionContent, index) => (
-                    <SingleSolution mdContent={solutionContent.content} title={solutionContent.title} img={solutionContent.img} key={index} />
+                    <SingleSolution 
+                        mdContent={solutionContent.content} 
+                        title={solutionContent.title} 
+                        identifier={solutionContent.id}
+                        img={solutionContent.img} 
+                        key={index} 
+                    />
                 ))}
             </Theme.SolutionContainer>
         </Theme.Container>

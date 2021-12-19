@@ -1,5 +1,6 @@
 ---
 title: Optimization
+id: optimization
 img: null
 ---
 

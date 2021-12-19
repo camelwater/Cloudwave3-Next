@@ -1,5 +1,6 @@
 ---
 title: Cloud Advisory Services
+id: cloud-advisory
 img: null
 ---
 

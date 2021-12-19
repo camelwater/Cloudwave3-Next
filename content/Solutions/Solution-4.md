@@ -1,5 +1,6 @@
 ---
 title: Chatbot
+id: chatbot
 img: 'DNA.jpg'
 ---
 

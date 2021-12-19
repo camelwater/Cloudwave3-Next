@@ -5,14 +5,14 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 
-const SingleService: React.FC<{ mdContent, title: string, img: string }> = ({ mdContent, title, img }) => {
+const SingleService: React.FC<{ mdContent, title: string, img: string, identifier: string }> = ({ mdContent, title, img, identifier }) => {
 
     let imgSrc = null;
     if (img !== null)  
         imgSrc = '/images/'+img; 
         
     return (
-        <Theme.ServiceContentContainer>
+        <Theme.ServiceContentContainer id={identifier}>
             <Theme.mdContentContainer>
                 <ScrollAnimation
                     animateIn='animate__flipInX'

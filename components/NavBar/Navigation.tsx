@@ -36,24 +36,80 @@ const NavigationComponent: React.FC = () => {
         }
     ];
 
+    const subMenus = {
+        "Services": [
+            {
+                name: "Data Services",
+                link: "/services/#data-services"
+            },
+            {
+                name: "Optimization",
+                link: "/services/#data-services"
+            },
+            {
+                name: "Cloud Advisory",
+                link: "/services/#cloud-advisory"
+            }
+        ],
+        "Solutions": [
+            {
+                name: "Real-time Medicine",
+                link: "/solutions/#rtm"
+            },
+            {
+                name: "Diagnostic + Procedural Discovery",
+                link: "/solutions/#dpd"
+            },
+            {
+                name: "RPA",
+                link: "/solutions/#rpa"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            }
+        ]
+    };
+
     return (
-        <>
-            {nav && 
-                // <CSSTransition in={nav} timeout={300} classNames='bgblur' unmountOnExit>
-                <NavMenu.MenuContainer />
-                // </CSSTransition>
-            }   
-            <CSSTransition in={nav} timeout={300} classNames='menu' unmountOnExit>
-                <NavMenu.ProxyMenuContainer onClick={ToggleNav}>
+        <> 
+            <CSSTransition in={(nav && !(menu in subMenus))} timeout={300} classNames='menu' unmountOnExit>
+                <NavMenu.MenuContainer>
                     <NavMenu.Menu>
                         {Links.map((entry, index) => (
-                            <Link href={entry.link} key={index} passHref={true}>
-                                <NavMenu.MenuLink>{entry.name}</NavMenu.MenuLink>
-                            </Link>
+                            (entry.name in subMenus) ? 
+                                <NavMenu.MenuLink onClick={() => setMenu(entry.name)}>
+                                    {entry.name}
+                                </NavMenu.MenuLink>
+                            :
+                                <Link href={entry.link} key={index} passHref={true}>
+                                    <NavMenu.MenuLink>{entry.name}</NavMenu.MenuLink>
+                                </Link>
                         ))}
                     </NavMenu.Menu>
-                </NavMenu.ProxyMenuContainer>
+                    <NavMenu.ProxyMenuContainer onClick={ToggleNav} />
+                </NavMenu.MenuContainer>
             </CSSTransition>
+
+            <CSSTransition in={nav && (menu in subMenus)} timeout={300} classNames='sub-menu' unmountOnExit>
+                <NavMenu.SubMenuContainer>
+                    <NavMenu.SubMenuArea>
+                        <NavMenu.SubMenuButton onClick={() => setMenu(null)}>
+                            <Icons.ChevronsLeft width={50} height={50}/>
+                        </NavMenu.SubMenuButton>
+                        <NavMenu.EmptyButton />
+                        <NavMenu.SubMenu>
+                            {menu in subMenus && subMenus[menu].map((entry, index) => (
+                                <Link href={entry.link} key={index} passHref={true}>
+                                    <NavMenu.SubMenuLink onClick={ToggleNav}>{entry.name}</NavMenu.SubMenuLink>
+                                </Link>
+                            ))}
+                        </NavMenu.SubMenu>
+                    </NavMenu.SubMenuArea>  
+                    <NavMenu.SubMenuBlurArea onClick={ToggleNav}/>
+                </NavMenu.SubMenuContainer>
+            </CSSTransition>
+            
 
             <NavBar.Nav>
                 <NavBar.NavContainer>

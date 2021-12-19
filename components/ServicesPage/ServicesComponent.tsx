@@ -16,7 +16,13 @@ const ServiceComponent: React.FC<{ contentData }> = ({ contentData }) => {
                 </ScrollAnimation>
 
                 {contentData.map((serviceContent, index) => (
-                    <SingleService mdContent={serviceContent.content} title={serviceContent.title} img={serviceContent.img} key={index} />
+                    <SingleService 
+                        mdContent={serviceContent.content} 
+                        title={serviceContent.title} 
+                        img={serviceContent.img} 
+                        identifier={serviceContent.id} 
+                        key={index} 
+                    />
                 ))}
             </Theme.ServiceContainer>
         </Theme.Container>

@@ -1,7 +1,7 @@
 
 .menu-enter {
     opacity: 0;
-    transform: translate3d(200%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
 }
 
 .menu-enter-active {
@@ -17,9 +17,76 @@
 
 .menu-exit-active {
     opacity: 0;
-    transform: translate3d(200%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
     transition: opacity 300ms, transform 300ms;
 }
+
+.menu-from-enter {
+    /* opacity: 0; */
+    transform: translate3d(-100%, 0, 0);
+}
+
+.menu-from-enter-active {
+    /* opacity: 1; */
+    transform: translate3d(0, 0, 0);
+    transition: transform 300ms;
+}
+
+.menu-from-exit {
+    /* opacity: 1; */
+    transform: translate3d(0, 0, 0);
+}
+
+.menu-from-exit-active {
+    /* opacity: 0; */
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 300ms;
+}
+
+.sub-menu-enter {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+}
+
+.sub-menu-enter-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.sub-menu-exit {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.sub-menu-exit-active {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.sub-menu-from-enter {
+    /* opacity: 0; */
+    transform: translate3d(100%, 0, 0);
+}
+
+.sub-menu-from-enter-active {
+    /* opacity: 1; */
+    transform: translate3d(0, 0, 0);
+    transition: transform 300ms;
+}
+
+.sub-menu-from-exit {
+    /* opacity: 1; */
+    transform: translate3d(0, 0, 0);
+}
+
+.sub-menu-from-exit-active {
+    /* opacity: 0; */
+    transform: translate3d(100%, 0, 0);
+    transition: transform 300ms;
+}
+
 
 
 .bgblur-enter {
