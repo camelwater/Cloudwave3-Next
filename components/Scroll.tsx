@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SmoothScroll: React.FC = () => {
+const SmoothScroll: React.FC<{ isNav?: boolean }> = ({ isNav = false }) => {
     React.useEffect(() => {
       let script = document.createElement('script');
       script.setAttribute(
@@ -8,9 +8,12 @@ const SmoothScroll: React.FC = () => {
         'https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js'
       );
       script.setAttribute('crossorigin', 'anonymous');
-      document.querySelector('body')!.appendChild(script);
-      document.querySelector('div')!.appendChild(script);
-    }, [])
+      if (isNav) {
+        document.querySelector('body')!.appendChild(script);
+      } else {
+        document.querySelector('body')!.appendChild(script);
+      }
+    }, [isNav])
   
     return <></>;
   }

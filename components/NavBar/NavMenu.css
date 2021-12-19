@@ -87,8 +87,6 @@
     transition: transform 300ms;
 }
 
-
-
 .bgblur-enter {
     opacity: 0;
     filter: 0;
@@ -109,6 +107,13 @@
     transition: opacity 300ms;
 }
 
-
+@keyframes color-rotation {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(650deg);
+    }
+}
 
 

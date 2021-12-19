@@ -3,7 +3,7 @@
 
 Technology driven products and processes are redefining our society - making us more connected and more real-time; however, the fragmentation of the online life is obvious and our lives are segregated into silos - shopping, traveling, utilities, civil services and etc. even though the separation is well intended and creating an ecosystem which seems to have no single point of failure. 
 
-The apparent silos, inconsistency and lacking of ground-up secure user identity management have created tremendous problems for both individual users and online entities, government, for-profit or non-profile entities along with their interaction with each other.
+The apparent silos, inconsistency and lacking of ground-up secure user identity management have created tremendous problems for both individual users and online entities, government, for-profit or non-profit entities along with their interaction with each other.
 
 
 ## The Solution

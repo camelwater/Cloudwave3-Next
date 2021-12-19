@@ -6,27 +6,15 @@ export const MenuContainer = styled('div', {
     zIndex: 9999,
     position: 'fixed',
     top: 0,
-    // left: '36vw',
     height: '100%',
     width: '100%',
-    // background: '#2A2A2A90',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    // backdropFilter: 'blur(5px)'
+    // '@media only screen and (min-width: 651px)': {
+    //     display: 'none'
+    // }
 })
-
-
-// export const ProxyMenuContainer2 = styled('div', {
-//     zIndex: 99999,
-//     position: 'fixed',
-//     top: 0,
-//     height: '100vh',
-//     width: '100vw',
-//     display: 'flex',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-// })
 
 export const ProxyMenuContainer = styled('div', {
     zIndex: 99999,
@@ -72,6 +60,23 @@ export const MenuButton = styled('button', {
     },
 })
 
+export const SubMenuLevel = styled('div', {
+    display: 'flex',
+    // wordWrap: 'break-word',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    cursor: 'pointer',
+    textDecoration: 'none',
+    color: '$white',
+    fontSize: '$3',
+    fontFamily: '$main',
+    margin: '0 10px 20px 10px',
+    transition: '0.25s linear',
+    '&:hover': {
+        color: 'GoldenRod'
+    }
+})
 export const MenuLink = styled('a', {
     cursor: 'pointer',
     textDecoration: 'none',
@@ -85,7 +90,8 @@ export const MenuLink = styled('a', {
     }
   })
 
-// subMenu stuff
+
+// <!----- SUBMENU STUFF -----!> //
 
 export const SubMenuContainer = styled('div', {
     zIndex: 9999,
@@ -93,24 +99,24 @@ export const SubMenuContainer = styled('div', {
     top: 0,
     height: '100%',
     width: '100%',
-    // background: '$primary',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    // backdropFilter: 'blur(5px)'
+    // '@media only screen and (min-width: 651px)': {
+    //     display: 'none'
+    // }
 })
 
 export const SubMenuBlurArea = styled('div', {
     zIndex: 99999,
     position: 'fixed',
     top: 0,
-    left: '64%',
+    left: '63%',
     width: '100%',
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    textAlign: 'center',
     backdropFilter: 'blur(5px)'
 })
 
@@ -124,20 +130,34 @@ export const SubMenuArea = styled('div', {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'top',
-    textAlign: 'center',
+    textAlign: 'left',
     
 })
 
-export const SubMenuTextContainer = styled('div', {
-    display: 'table-column',
-    position: 'relative',
-    top: '10%',
-    width: '100%',
-    // height: '70%',
-    // marginBottom: '15vh',
-    overflowY: 'scroll',
-    justifyCOntent: 'center',
+export const BottomMenu = styled('div', {
+    background: '$primary',
+    borderTop: '1px solid GoldenRod',
+    paddingLeft: '1rem',
+    paddingRight: '1rem',
+    display: 'flex',
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    right: 0,
     alignItems: 'center',
+    height: '75px',
+    width: '65%',
+    zIndex: 99999999
+})
+
+
+export const SubMenu = styled('div', {
+    zIndex: 999999,
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '3rem 1rem 7rem',
+    overflowX: 'hidden',
+    overflowY: 'scroll',
     '&::-webkit-scrollbar': {
         width: 5,
     },
@@ -148,17 +168,8 @@ export const SubMenuTextContainer = styled('div', {
         background: 'GoldenRod',
     },
     '&::-webkit-scrollbar-thumb:hover': {
-        background: 'GoldenRod'
+        background: 'PaleGoldenRod',
     }
-})
-
-export const SubMenu = styled('div', {
-    zIndex: 999999,
-    display: 'flex',
-    // marginTop: '25%',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    textAlign: 'center',
     
 })
 
@@ -175,22 +186,14 @@ export const SubMenuLink = styled('a', {
     }
 })
 
-// export const EmptyButton = styled('button', {
-//     background: 'none',
-//     outline: 'none',
-//     border: 'none',
-//     color: '$white',
-//     display: 'flex',
-//     alignItems: 'center',
-//     justifyContent: 'right',
-//     margin: '35px 15px 25px 10px',
-// })
-
 export const SubMenuButton = styled('button', {
-    position: 'relative',
-    width: 50,
-    top: '3%',
-    right: '-80%',
+    // position: 'relative',
+    // width: 50,
+    // top: '3%',
+    // right: '-100%',
+    // marginLeft: '-75px',
+    position: 'absolute',
+    right: '5%',
     zIndex: 999999999,
     background: 'none',
     outline: 'none',
@@ -200,9 +203,9 @@ export const SubMenuButton = styled('button', {
     alignContent: 'center',
     justifyContent: 'right',
     transition: '0.25s linear',
-    color: '$asd',
+    color: 'GoldenRod',
     '&:hover': {
-        color: 'GoldenRod',
+        color: 'LightGoldenRodYellow',
         transform: 'rotate(180deg)'
     },
     // '@media only screen and (min-width: 650px)': {

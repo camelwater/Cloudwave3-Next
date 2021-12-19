@@ -37,7 +37,13 @@ export const TitleLinkText = styled('a', {
     textDecoration: 'none',
     transition: '0.2s linear',
     '&:hover': {
-        color: '$white',
+        background: '$gradient',
+        backgroundClip: 'text',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        animation: 'color-rotation 1.75s',
+        animationIterationCount: 'infinite',
+        animationDirection: 'alternate',
         transform: 'scale(1.1, 1.1)'
     },
     '@Flip': {

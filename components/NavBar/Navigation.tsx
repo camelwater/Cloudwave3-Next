@@ -15,6 +15,11 @@ const NavigationComponent: React.FC = () => {
     const ToggleNav = () => {
         setNav((prevState) => !prevState)
         // setNav(!nav);
+        if (nav) {
+            document.documentElement.style.overflowY = 'scroll';
+        } else {
+            document.documentElement.style.overflowY = 'hidden';
+        }
     }
 
 
@@ -68,93 +73,26 @@ const NavigationComponent: React.FC = () => {
             {
                 name: "Chatbot",
                 link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
-            },
-            {
-                name: "Chatbot",
-                link: "/solutions/#chatbot"
             }
-            
         ]
     };
 
     return (
         <> 
-            <SmoothScroll />
+            <SmoothScroll isNav={true} />
+
             <CSSTransition in={(nav && !(menu in subMenus))} timeout={300} classNames='menu' unmountOnExit>
                 <NavMenu.MenuContainer>
                     <NavMenu.Menu>
                         {Links.map((entry, index) => (
                             (entry.name in subMenus) ? 
-                                <NavMenu.MenuLink key={index} onClick={() => setMenu(entry.name)}>
-                                    {entry.name}
-                                </NavMenu.MenuLink>
+                                <NavMenu.SubMenuLevel key={index} onClick={() => setMenu(entry.name)}>
+                                    {entry.name} 
+                                    <Icons.ChevronRight style={{ marginLeft: 7, height: 15, width: 15, marginTop: 4 }}/>
+                                </NavMenu.SubMenuLevel>
                             :
                                 <Link href={entry.link} key={index} passHref={true}>
-                                    <NavMenu.MenuLink>{entry.name}</NavMenu.MenuLink>
+                                    <NavMenu.MenuLink onClick={ToggleNav}>{entry.name}</NavMenu.MenuLink>
                                 </Link>
                         ))}
                     </NavMenu.Menu>
@@ -165,23 +103,23 @@ const NavigationComponent: React.FC = () => {
             <CSSTransition in={nav && (menu in subMenus)} timeout={300} classNames='sub-menu' unmountOnExit>
                 <NavMenu.SubMenuContainer>
                     <NavMenu.SubMenuArea>
-                        <NavMenu.SubMenuButton onClick={() => setMenu(null)}>
-                            <Icons.ChevronsLeft width={50} height={50}/>
-                        </NavMenu.SubMenuButton>
-                        <NavMenu.SubMenuTextContainer>
-                            <NavMenu.SubMenu>
-                                {menu in subMenus && subMenus[menu].map((entry, index) => (
-                                    <Link href={entry.link} key={index} passHref={true}>
-                                        <NavMenu.SubMenuLink onClick={ToggleNav}>{entry.name}</NavMenu.SubMenuLink>
-                                    </Link>
-                                ))}
-                            </NavMenu.SubMenu>
-                        </NavMenu.SubMenuTextContainer>
+                        <NavMenu.SubMenu>
+                            {menu in subMenus && subMenus[menu].map((entry, index) => (
+                                <Link href={entry.link} key={index} passHref={true}>
+                                    <NavMenu.SubMenuLink onClick={ToggleNav}>{entry.name}</NavMenu.SubMenuLink>
+                                </Link>
+                            ))}
+                        </NavMenu.SubMenu>
+                        <NavMenu.BottomMenu>
+                            <NavMenu.SubMenuButton onClick={() => setMenu(null)}>
+                                <Icons.ChevronsLeft width={50} height={50}/>
+                            </NavMenu.SubMenuButton>
+                        </NavMenu.BottomMenu>
                     </NavMenu.SubMenuArea>  
+                    
                     <NavMenu.SubMenuBlurArea onClick={ToggleNav}/>
                 </NavMenu.SubMenuContainer>
             </CSSTransition>
-            
 
             <NavBar.Nav>
                 <NavBar.NavContainer>
