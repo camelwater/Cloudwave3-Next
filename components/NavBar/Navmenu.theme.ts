@@ -157,10 +157,11 @@ export const EmptyButton = styled('button', {
     justifyContent: 'right',
     margin: '35px 15px 25px 10px',
 })
+
 export const SubMenuButton = styled('button', {
     position: 'fixed',
-    top: 40,
-    right: 250,
+    top: '5%',
+    right: '40%',
     zIndex: 999999999,
     background: 'none',
     outline: 'none',
