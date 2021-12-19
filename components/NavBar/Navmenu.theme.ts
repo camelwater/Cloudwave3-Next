@@ -106,7 +106,7 @@ export const SubMenuBlurArea = styled('div', {
     top: 0,
     left: '64%',
     width: '100%',
-    height: '125%',
+    height: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -118,20 +118,48 @@ export const SubMenuArea = styled('div', {
     position: 'fixed',
     left: 0,
     width: '65%',
-    height: '125%',
+    height: '100%',
     background: '$primary',
     zIndex: 999999,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
-    textAlign: 'center'
+    justifyContent: 'top',
+    textAlign: 'center',
+    
 })
+
+export const SubMenuTextContainer = styled('div', {
+    display: 'table-column',
+    position: 'relative',
+    top: '10%',
+    width: '100%',
+    // height: '70%',
+    // marginBottom: '15vh',
+    overflowY: 'scroll',
+    justifyCOntent: 'center',
+    alignItems: 'center',
+    '&::-webkit-scrollbar': {
+        width: 5,
+    },
+    '&::-webkit-scrollbar-track': {
+        background: '$primary',
+    },
+    '&::-webkit-scrollbar-thumb': {
+        background: 'GoldenRod',
+    },
+    '&::-webkit-scrollbar-thumb:hover': {
+        background: 'GoldenRod'
+    }
+})
+
 export const SubMenu = styled('div', {
     zIndex: 999999,
     display: 'flex',
+    // marginTop: '25%',
     flexDirection: 'column',
     justifyContent: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
+    
 })
 
 export const SubMenuLink = styled('a', {
@@ -147,30 +175,32 @@ export const SubMenuLink = styled('a', {
     }
 })
 
-export const EmptyButton = styled('button', {
-    background: 'none',
-    outline: 'none',
-    border: 'none',
-    color: '$white',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'right',
-    margin: '35px 15px 25px 10px',
-})
+// export const EmptyButton = styled('button', {
+//     background: 'none',
+//     outline: 'none',
+//     border: 'none',
+//     color: '$white',
+//     display: 'flex',
+//     alignItems: 'center',
+//     justifyContent: 'right',
+//     margin: '35px 15px 25px 10px',
+// })
 
 export const SubMenuButton = styled('button', {
-    position: 'fixed',
-    top: '5%',
-    right: '40%',
+    position: 'relative',
+    width: 50,
+    top: '3%',
+    right: '-80%',
     zIndex: 999999999,
     background: 'none',
     outline: 'none',
     border: 'none',
-    color: '$white',
     display: 'flex',
     alignItems: 'center',
+    alignContent: 'center',
     justifyContent: 'right',
     transition: '0.25s linear',
+    color: '$asd',
     '&:hover': {
         color: 'GoldenRod',
         transform: 'rotate(180deg)'

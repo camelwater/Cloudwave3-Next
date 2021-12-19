@@ -9,6 +9,7 @@ const SmoothScroll: React.FC = () => {
       );
       script.setAttribute('crossorigin', 'anonymous');
       document.querySelector('body')!.appendChild(script);
+      document.querySelector('div')!.appendChild(script);
     }, [])
   
     return <></>;

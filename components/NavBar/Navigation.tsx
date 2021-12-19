@@ -4,6 +4,7 @@ import * as NavMenu from './Navmenu.theme';
 import React from 'react';
 import * as Icons from 'react-feather';
 import { CSSTransition } from 'react-transition-group';
+import SmoothScroll from '@components/Scroll';
 
 
 const NavigationComponent: React.FC = () => {
@@ -67,18 +68,88 @@ const NavigationComponent: React.FC = () => {
             {
                 name: "Chatbot",
                 link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
+            },
+            {
+                name: "Chatbot",
+                link: "/solutions/#chatbot"
             }
+            
         ]
     };
 
     return (
         <> 
+            <SmoothScroll />
             <CSSTransition in={(nav && !(menu in subMenus))} timeout={300} classNames='menu' unmountOnExit>
                 <NavMenu.MenuContainer>
                     <NavMenu.Menu>
                         {Links.map((entry, index) => (
                             (entry.name in subMenus) ? 
-                                <NavMenu.MenuLink onClick={() => setMenu(entry.name)}>
+                                <NavMenu.MenuLink key={index} onClick={() => setMenu(entry.name)}>
                                     {entry.name}
                                 </NavMenu.MenuLink>
                             :
@@ -97,14 +168,15 @@ const NavigationComponent: React.FC = () => {
                         <NavMenu.SubMenuButton onClick={() => setMenu(null)}>
                             <Icons.ChevronsLeft width={50} height={50}/>
                         </NavMenu.SubMenuButton>
-                        <NavMenu.EmptyButton />
-                        <NavMenu.SubMenu>
-                            {menu in subMenus && subMenus[menu].map((entry, index) => (
-                                <Link href={entry.link} key={index} passHref={true}>
-                                    <NavMenu.SubMenuLink onClick={ToggleNav}>{entry.name}</NavMenu.SubMenuLink>
-                                </Link>
-                            ))}
-                        </NavMenu.SubMenu>
+                        <NavMenu.SubMenuTextContainer>
+                            <NavMenu.SubMenu>
+                                {menu in subMenus && subMenus[menu].map((entry, index) => (
+                                    <Link href={entry.link} key={index} passHref={true}>
+                                        <NavMenu.SubMenuLink onClick={ToggleNav}>{entry.name}</NavMenu.SubMenuLink>
+                                    </Link>
+                                ))}
+                            </NavMenu.SubMenu>
+                        </NavMenu.SubMenuTextContainer>
                     </NavMenu.SubMenuArea>  
                     <NavMenu.SubMenuBlurArea onClick={ToggleNav}/>
                 </NavMenu.SubMenuContainer>
