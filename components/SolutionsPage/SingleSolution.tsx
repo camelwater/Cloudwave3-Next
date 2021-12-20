@@ -19,9 +19,10 @@ const SingleSolution: React.FC<{ mdContent, title: string, img: string, identifi
                 // <Theme.ImgBox style={{ width: 1200, height: 650, marginLeft: `${35}vw`, marginTop: 75, position: 'absolute' }}>
                 <Theme.ImgBox style={{ width: 4000, height: 700, marginLeft: '-25vw', marginRight: '-35vw', marginTop: 75}}>
                     <ParallaxProvider>
-                        <Theme.ImgBox style={{ width: 1200, marginLeft: -80, marginTop: 50, position: 'absolute'}}>
+                        <Theme.ImgBox style={{ width: 1200, marginLeft: -85, marginTop: 50, position: 'absolute'}}>
                             <Parallax x={ [-7, 7] }>
                                 <Image
+                                    priority
                                     src={'/images/hand_eth-blocks.png'}
                                     height={650}
                                     width={1200}
