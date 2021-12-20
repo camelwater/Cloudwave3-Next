@@ -1,7 +1,7 @@
 ---
 title: Chatbot
 id: chatbot
-img: 'DNA.jpg'
+img: DNA.jpg
 ---
 
 ### OneHealth Suite

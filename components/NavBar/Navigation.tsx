@@ -88,7 +88,7 @@ const NavigationComponent: React.FC = () => {
                             (entry.name in subMenus) ? 
                                 <NavMenu.SubMenuLevel key={index} onClick={() => setMenu(entry.name)}>
                                     {entry.name} 
-                                    <Icons.ChevronRight style={{ marginLeft: 7, height: 15, width: 15, marginTop: 4 }}/>
+                                    <Icons.ChevronRight style={{ marginLeft: 7, height: 15, width: 15, marginTop: 2.5 }}/>
                                 </NavMenu.SubMenuLevel>
                             :
                                 <Link href={entry.link} key={index} passHref={true}>

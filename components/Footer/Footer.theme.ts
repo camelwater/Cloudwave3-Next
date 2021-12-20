@@ -29,7 +29,7 @@ export const LinkText = styled('a', {
     textDecoration: 'none',
     color: '$main2',
     marginRight: 15,
-    transition: '0.1s linear',
+    transition: '0.15s linear',
     '&:hover': {
         color: '$white',
         transform: 'scale(1.05, 1.05)'

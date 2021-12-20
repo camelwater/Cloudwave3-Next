@@ -1,7 +1,7 @@
 ---
 title: Real-time Medicine
 id: rtm
-img: null
+img: blocks_eth-blocks.png
 ---
 
 ### Healthcare Data Mesh

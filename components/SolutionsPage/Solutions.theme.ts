@@ -3,18 +3,26 @@ import { styled } from '@css/stitches.config';
 export const Container = styled('div', {
     display: 'flex',
     flexDirection: 'column',
-    margin: '100px 100px',
+    // margin: '100px 100px',
+    marginTop: 100,
+    marginBottom: 100,
     justifyContent: 'center',
-    alignItems: 'center',
+    // alignItems: 'center',
     '@iPadPro': {
         margin: '100px 0',
+        alignItems: 'center'
       },
 })
 
 export const SolutionContainer = styled('div', {
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: 400,
+    // marginLeft: '10vw',
+    // marginRight: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+    alignText: 'left',
     width: '100%',
     maxWidth: '100vw',
     '@iPadPro': {
@@ -27,12 +35,15 @@ export const SolutionContainer = styled('div', {
 export const SolutionContentContainer = styled('div', {
     display: 'flex',
     flexDirection: 'row',
-    margin: '0 -150px',
+    // margin: '0 -100px',
+    justifyContent: 'space-between',
+    alignItems: 'center',   
     // marginTop: -100,
     // width: 1000,
     width: '100%',
-    maxWidth: '100vw',
+    maxWidth: '60vw',
     '@iPadPro': {
+        maxWidth: '80w',
         margin: '0 30px',
         justifyContent: 'center',
         alignItems: 'center',
@@ -48,8 +59,10 @@ export const TitleText = styled('h1', {
     WebkitTextFillColor: 'transparent',
     fontSize: '$6',
     fontFamily: '$main',
-    margin: '60px 0',
-    alignText: 'center'
+    margin: '60px 0 0 300px',
+    '@iPadPro': {
+        margin: '60px 0'
+    }    
 })
 
 export const ImgBox = styled('div', {
@@ -57,9 +70,13 @@ export const ImgBox = styled('div', {
     display: 'flex',
     position: 'relative',
     width: 300,
-    '@iPadPro': {
+    marginRight: '50vw',
+    '@media only screen and (max-width: 1400px)': {
       display: 'none',
     },
+    '@iPadPro': {
+        display: 'none'
+    }
   })
 
 export const mdContentContainer = styled('div', {
@@ -67,7 +84,7 @@ export const mdContentContainer = styled('div', {
     color: '$white',
     display: 'flex',
     flexDirection: 'column',
-    margin: '50px 100px',
+    margin: '50px 0',
     width: '100%',
     maxWidth: '40vw',
     zIndex: 99,
@@ -92,7 +109,7 @@ export const mdContentContainer = styled('div', {
         fontSize: '$6',
         fontFamily: '$main',
         // margin: '60px 0',
-        alignText: 'center'
+        alignText: 'left'
     },
     h2: {
         marginTop: 100,

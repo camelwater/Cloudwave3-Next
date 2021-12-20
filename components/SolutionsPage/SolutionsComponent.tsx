@@ -7,14 +7,13 @@ const SolutionComponent: React.FC<{ contentData }> = ({ contentData }) => {
 
     return (
         <Theme.Container>
-            <Theme.SolutionContainer>
-                <ScrollAnimation 
+            <ScrollAnimation 
                     animateIn='animate__bounceInRight'
                     animateOnce={true}
-                >
-                    <Theme.TitleText>Solutions</Theme.TitleText>
-                </ScrollAnimation>
-
+            >
+                <Theme.TitleText>Solutions</Theme.TitleText>
+            </ScrollAnimation>
+            <Theme.SolutionContainer>
                 {contentData.map((solutionContent, index) => (
                     <SingleSolution 
                         mdContent={solutionContent.content} 
