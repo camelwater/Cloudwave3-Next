@@ -84,7 +84,7 @@ export const mdContentContainer = styled('div', {
     color: '$white',
     display: 'flex',
     flexDirection: 'column',
-    margin: '50px 0',
+    margin: '50px 0px',
     width: '100%',
     maxWidth: '40vw',
     zIndex: 99,

@@ -41,7 +41,7 @@ export const TitleLinkText = styled('a', {
         backgroundClip: 'text',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
-        animation: 'color-rotation 1.75s',
+        animation: 'color-rotation 2.5s',
         animationIterationCount: 'infinite',
         animationDirection: 'alternate',
         transform: 'scale(1.1, 1.1)'
