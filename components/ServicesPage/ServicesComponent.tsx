@@ -7,23 +7,22 @@ const ServiceComponent: React.FC<{ contentData }> = ({ contentData }) => {
 
     return (
         <Theme.Container>
+            <ScrollAnimation 
+                animateIn='animate__bounceInRight'
+                animateOnce={true}
+            >
+                <Theme.TitleText>Services</Theme.TitleText>
+            </ScrollAnimation>
             <Theme.ServiceContainer>
-                <ScrollAnimation 
-                    animateIn='animate__bounceInRight'
-                    animateOnce={true}
-                >
-                    <Theme.TitleText>Services</Theme.TitleText>
-                </ScrollAnimation>
-
-                {contentData.map((serviceContent, index) => (
-                    <SingleService 
-                        mdContent={serviceContent.content} 
-                        title={serviceContent.title} 
-                        img={serviceContent.img} 
-                        identifier={serviceContent.id} 
-                        key={index} 
-                    />
-                ))}
+            {contentData.map((serviceContent, index) => (
+                <SingleService 
+                    mdContent={serviceContent.content} 
+                    title={serviceContent.title} 
+                    img={serviceContent.img} 
+                    identifier={serviceContent.id} 
+                    key={index} 
+                />
+            ))}
             </Theme.ServiceContainer>
         </Theme.Container>
     );

@@ -61,7 +61,7 @@ export const TitleText = styled('h1', {
     WebkitTextFillColor: 'transparent',
     fontSize: '$6',
     fontFamily: '$main',
-    margin: '60px 0 0 300px',
+    margin: '60px 0 0 13vw',
     '@iPadPro': {
         margin: '60px 0'
     }    
@@ -72,14 +72,7 @@ export const ImgContainer = styled('div', {
     display: 'flex',
     position: 'relative',
     width: 300,
-    // borderRight: '1px solid $main'
-    // marginRight: '50vw',
-    // '@media only screen and (max-width: 1400px)': {
-    //   display: 'none',
-    // },
-    // '@iPadPro': {
-    //     display: 'none'
-    // }
+   
   })
 
 export const ParallaxBackgroundImgContainer = styled(ImgContainer, {

@@ -3,20 +3,26 @@ import { styled } from '@css/stitches.config';
 export const Container = styled('div', {
     display: 'flex',
     flexDirection: 'column',
-    margin: '100px 100px',
+    // margin: '100px 100px',
+    marginTop: 100,
+    marginBottom: 100,
     justifyContent: 'center',
-    alignItems: 'center',
+    // alignItems: 'center',
     '@iPadPro': {
         margin: '100px 0',
+        alignItems: 'center'
       },
 })
 
 export const ServiceContainer = styled('div', {
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: 400,
+    // marginLeft: 400,
     width: '100%',
     maxWidth: '100vw',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignText: 'left',
     '@iPadPro': {
         margin: '0 30px',
         justifyContent: 'center',
@@ -27,11 +33,12 @@ export const ServiceContainer = styled('div', {
 export const ServiceContentContainer = styled('div', {
     display: 'flex',
     flexDirection: 'row',
-    margin: '0 -100px',
-    // marginTop: -100,
-    // width: 1000,
+    flexWrap: 'wrap',
+    // margin: '0 -100px',
+    justifyContent: 'space-between',
+    aliignItems: 'center',
     width: '100%',
-    maxWidth: '100vw',
+    maxWidth: '85vw',
     '@iPadPro': {
         margin: '0 30px',
         justifyContent: 'center',
@@ -48,8 +55,10 @@ export const TitleText = styled('h1', {
     WebkitTextFillColor: 'transparent',
     fontSize: '$6',
     fontFamily: '$main',
-    margin: '60px 0',
-    alignText: 'center'
+    margin: '60px 0 0 13vw',
+    '@iPadPro': {
+        margin: '60px 0'
+    }    
 })
 
 export const ImgBox = styled('div', {
@@ -57,7 +66,7 @@ export const ImgBox = styled('div', {
     display: 'flex',
     position: 'relative',
     width: 600,
-    '@media only screen and (max-width: 1350px)': {
+    '@iPadPro': {
       display: 'none',
     },
   })
@@ -67,7 +76,8 @@ export const mdContentContainer = styled('div', {
     color: '$white',
     display: 'flex',
     flexDirection: 'column',
-    margin: '50px 100px',
+    // margin: '50px 100px',
+    marginLeft: '5vw',
     width: '100%',
     maxWidth: '35vw',
     zIndex: 99,
