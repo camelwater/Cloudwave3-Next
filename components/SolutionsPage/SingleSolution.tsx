@@ -5,56 +5,57 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 
-const SingleSolution: React.FC<{ mdContent, title: string, img: string, identifier: string }> = ({ mdContent, title, img, identifier }) => {
+const SingleSolution: React.FC<{ mdContent, title: string, img: string, identifier: string, idx: number }> = ({ mdContent, title, img, identifier, idx }) => {
 
     let imgSrc = null;
     if (img !== null)  
         imgSrc = '/images/'+img; 
         
     return (
-        <Theme.SolutionContentContainer id={identifier}>
+        <Theme.SolutionContentContainer id={identifier} style={idx==0?{ borderTop: '0px'}:{}}>
             
             {img!==null && (
                 img==="blocks_eth-blocks.png" ?
-                // <Theme.ImgBox style={{ width: 1200, height: 650, marginLeft: `${35}vw`, marginTop: 75, position: 'absolute' }}>
-                <Theme.ImgBox style={{ width: 4000, height: 700, marginLeft: '-25vw', marginRight: '-35vw', marginTop: 75}}>
+                <Theme.ParallaxBackgroundImgContainer style={{ }}>
+                    <Image
+                        priority
+
+                        src={imgSrc}
+                        // height='450%'
+                        // width='575%'
+                        layout='fill'
+                        alt={img}
+
+                    />
                     <ParallaxProvider>
-                        <Theme.ImgBox style={{ width: 1200, marginLeft: -85, marginTop: 50, position: 'absolute'}}>
-                            <Parallax x={ [-7, 7] }>
+                        <Theme.ParallaxImgContainer style={{ }}>
+                            <Parallax x={ [-10, 10] }>
                                 <Image
                                     priority
                                     src={'/images/hand_eth-blocks.png'}
-                                    height={650}
-                                    width={1200}
+                                    height={'425%'}
+                                    width={'500%'}
                                     alt={'hand'}
                                 />
                             </Parallax>
-                        </Theme.ImgBox>
+                        </Theme.ParallaxImgContainer>
                     </ParallaxProvider>
-                    <Image
-                        priority
-                        src={imgSrc}
-                        height={500}
-                        width={1250}
-                        alt={img}
-                    />  
-                </Theme.ImgBox>
+                </Theme.ParallaxBackgroundImgContainer>
             :
-                <Theme.ImgBox style={{ width: '75vw', height: 350, marginLeft: '-7vw', marginRight: '7vw', marginTop: 175 }}>
+                <Theme.ImgContainer style={{ width: '30vw', height: '20vw', marginTop: 150, marginLeft: '3vw' }}>
                     {/* <ParallaxProvider>
                         <Parallax x={[-35, 35]}> */}
-                            <Image
+                            <Theme.SImage
                                 priority
+                                layout='fill'
                                 src={imgSrc}
-                                height={350}
-                                width={'550vw'}
                                 alt={img}
                             />
                         {/* </Parallax>
                     </ParallaxProvider> */}
-                </Theme.ImgBox>
+                </Theme.ImgContainer>
             )}
-            <Theme.mdContentContainer>
+            <Theme.mdContentContainer style={img!==null?{ maxWidth: '35vw'}:{}}>
                 <ScrollAnimation
                     animateIn='animate__flipInX'
                     animateOnce={true}

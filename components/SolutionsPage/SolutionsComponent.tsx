@@ -19,8 +19,9 @@ const SolutionComponent: React.FC<{ contentData }> = ({ contentData }) => {
                         mdContent={solutionContent.content} 
                         title={solutionContent.title} 
                         identifier={solutionContent.id}
-                        img={solutionContent.img} 
-                        key={index} 
+                        img={solutionContent.img}
+                        idx={index}
+                        key={index}
                     />
                 ))}
             </Theme.SolutionContainer>

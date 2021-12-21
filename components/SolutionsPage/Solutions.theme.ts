@@ -1,4 +1,5 @@
 import { styled } from '@css/stitches.config';
+import Image from 'next/image';
 
 export const Container = styled('div', {
     display: 'flex',
@@ -35,18 +36,19 @@ export const SolutionContainer = styled('div', {
 export const SolutionContentContainer = styled('div', {
     display: 'flex',
     flexDirection: 'row',
-    // margin: '0 -100px',
+    flexWrap: 'wrap',
+    borderTop: '1px solid $main',
     justifyContent: 'space-between',
     alignItems: 'center',   
-    // marginTop: -100,
-    // width: 1000,
+    marginTop: 100,
     width: '100%',
-    maxWidth: '60vw',
+    maxWidth: '75vw',
     '@iPadPro': {
         maxWidth: '80w',
         margin: '0 30px',
         justifyContent: 'center',
         alignItems: 'center',
+        flexDirection: 'column'
     },
 })
 
@@ -65,26 +67,60 @@ export const TitleText = styled('h1', {
     }    
 })
 
-export const ImgBox = styled('div', {
+export const ImgContainer = styled('div', {
     zIndex: 9,
     display: 'flex',
     position: 'relative',
     width: 300,
-    marginRight: '50vw',
-    '@media only screen and (max-width: 1400px)': {
-      display: 'none',
-    },
-    '@iPadPro': {
-        display: 'none'
-    }
+    // borderRight: '1px solid $main'
+    // marginRight: '50vw',
+    // '@media only screen and (max-width: 1400px)': {
+    //   display: 'none',
+    // },
+    // '@iPadPro': {
+    //     display: 'none'
+    // }
   })
+
+export const ParallaxBackgroundImgContainer = styled(ImgContainer, {
+    width: '27vw', 
+    height: '25vw', 
+    marginLeft: '5vw',
+    maxWidth: '500px',
+    maxHeight: '450px',
+
+})
+
+export const ParallaxImgContainer = styled(ImgContainer, {
+    width: '30vw', 
+    height: '25vw', 
+    left: '-12vw', 
+    marginTop: '4vw', 
+    position: 'relative',
+    maxWidth: '500px',
+    maxHeight: '450px',
+    '@iPadPro': {
+        left: '-13vw'
+    },
+    '@media (min-width: 2100px)': {
+        left: '-14rem',
+        marginTop: '4.5rem'
+    }
+})
+ 
+export const SImage = styled (Image, {
+    width: '100%',
+    backgroundSize: 'cover',
+    background: 'no-repeat 50px'
+})
 
 export const mdContentContainer = styled('div', {
 
     color: '$white',
     display: 'flex',
     flexDirection: 'column',
-    margin: '50px 0px',
+    margin: '0px 0px 0px 3vw',
+    // marginBottom: 50,
     width: '100%',
     maxWidth: '40vw',
     zIndex: 99,
@@ -92,6 +128,7 @@ export const mdContentContainer = styled('div', {
         width: '100%',
         maxWidth: '60vw',
         margin: '0 30px',
+        marginBottom: 100,
         justifyContent: 'center',
         alignItems: 'center',   
     },
@@ -99,7 +136,7 @@ export const mdContentContainer = styled('div', {
         fontFamily: '$main',
     },
     'h1, pre': {
-        margin: '30px 0',
+        margin: '0px 0',
         display: 'inline-block',
         background: '$gradient',
         width: 'fit-content',
@@ -108,7 +145,6 @@ export const mdContentContainer = styled('div', {
         WebkitTextFillColor: 'transparent',
         fontSize: '$6',
         fontFamily: '$main',
-        // margin: '60px 0',
         alignText: 'left'
     },
     h2: {
