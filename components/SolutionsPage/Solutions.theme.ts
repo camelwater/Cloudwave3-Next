@@ -1,5 +1,6 @@
 import { styled } from '@css/stitches.config';
 import Image from 'next/image';
+import { isPropertySignature } from 'typescript';
 
 export const Container = styled('div', {
     display: 'flex',
@@ -67,24 +68,41 @@ export const TitleText = styled('h1', {
     }    
 })
 
+export const BaseImgContainer = styled('div', {
+    zIndex: 9,
+    display: 'flex',
+    position: 'relative',   
+})
+
 export const ImgContainer = styled('div', {
     zIndex: 9,
     display: 'flex',
-    position: 'relative',
-    width: 300,
-   
-  })
+    position: 'relative',  
+    width: '30vw',
+    height: '20vw', 
+    marginTop: 150, 
+    marginLeft: '3vw',
+    '@iPadPro': {
+        marginLeft: 0,
+        width: '60vw',
+        height: '40vw'
+    }
+})
 
-export const ParallaxBackgroundImgContainer = styled(ImgContainer, {
+export const ParallaxBackgroundImgContainer = styled(BaseImgContainer, {
     width: '27vw', 
     height: '25vw', 
     marginLeft: '5vw',
     maxWidth: '500px',
     maxHeight: '450px',
+    '@iPadPro': {
+        width: '60vw',
+        height: '52vw'
+    }
 
 })
 
-export const ParallaxImgContainer = styled(ImgContainer, {
+export const ParallaxImgContainer = styled(BaseImgContainer, {
     width: '30vw', 
     height: '25vw', 
     left: '-12vw', 
@@ -93,7 +111,10 @@ export const ParallaxImgContainer = styled(ImgContainer, {
     maxWidth: '500px',
     maxHeight: '450px',
     '@iPadPro': {
-        left: '-13vw'
+        left: '-27.5vw',
+        marginTop: '9vw',
+        width: '65vw',
+        height: '55vw'
     },
     '@media (min-width: 2100px)': {
         left: '-14rem',
@@ -114,13 +135,28 @@ export const mdContentContainer = styled('div', {
     flexDirection: 'column',
     margin: '0px 0px 0px 3vw',
     // marginBottom: 50,
-    width: '100%',
-    maxWidth: '40vw',
     zIndex: 99,
+    width: '100%',
+    variants: {
+        variant: {
+            noImg: {
+                maxWidth: '40vw',
+                '@iPadPro': {
+                    maxWidth: '75vw'
+                }
+            },
+            img: {
+                maxWidth: '35vw',
+                '@iPadPro': {
+                    maxWidth: '75vw'
+                }
+            }
+        }
+    },
     '@iPadPro': {
-        width: '100%',
-        maxWidth: '60vw',
-        margin: '0 30px',
+        // margin: '0 30px',
+        width: '85%',
+        margin: '0',
         marginBottom: 100,
         justifyContent: 'center',
         alignItems: 'center',   
@@ -192,4 +228,17 @@ export const mdContentContainer = styled('div', {
             background: '#5CC2E5',
         },
     },
-  })
+})
+
+export const mdPictureContentContainer = styled(mdContentContainer, {
+    maxWidth: '35vw',
+    zIndex: 99,
+    '@iPadPro': {
+        width: '100%',
+        maxWidth: '50vw',
+        margin: '0 30px',
+        marginBottom: 100,
+        justifyContent: 'center',
+        alignItems: 'center',   
+    },
+})

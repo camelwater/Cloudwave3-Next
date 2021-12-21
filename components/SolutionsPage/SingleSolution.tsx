@@ -16,7 +16,7 @@ const SingleSolution: React.FC<{ mdContent, title: string, img: string, identifi
             
             {img!==null && (
                 img==="blocks_eth-blocks.png" ?
-                <Theme.ParallaxBackgroundImgContainer style={{ }}>
+                <Theme.ParallaxBackgroundImgContainer>
                     <Image
                         priority
 
@@ -42,7 +42,7 @@ const SingleSolution: React.FC<{ mdContent, title: string, img: string, identifi
                     </ParallaxProvider>
                 </Theme.ParallaxBackgroundImgContainer>
             :
-                <Theme.ImgContainer style={{ width: '30vw', height: '20vw', marginTop: 150, marginLeft: '3vw' }}>
+                <Theme.ImgContainer>
                     {/* <ParallaxProvider>
                         <Parallax x={[-35, 35]}> */}
                             <Theme.SImage
@@ -55,7 +55,7 @@ const SingleSolution: React.FC<{ mdContent, title: string, img: string, identifi
                     </ParallaxProvider> */}
                 </Theme.ImgContainer>
             )}
-            <Theme.mdContentContainer style={img!==null?{ maxWidth: '35vw'}:{}}>
+            <Theme.mdContentContainer variant={img===null?"noImg":"img"}>
                 <ScrollAnimation
                     animateIn='animate__flipInX'
                     animateOnce={true}

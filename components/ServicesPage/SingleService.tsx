@@ -33,15 +33,15 @@ const SingleService: React.FC<{ mdContent, title: string, img: string, identifie
                 </ScrollAnimation>
             </Theme.mdContentContainer>
             {imgSrc!==null && 
-                <Theme.ImgBox style={{ width: '30vw', height: '20vw', marginLeft: '1vw', marginTop: 150 }}>
+                <Theme.ImgBox style={{ width: '35vw', height: '20vw', marginLeft: '1vw', marginTop: 75 }}>
                  
                     <ParallaxProvider>
                         <Parallax x={[-15, 15]}>
                             <Image
                                 priority
                                 src={imgSrc}
-                                height={450} 
-                                width={550}
+                                height={500} 
+                                width={700}
                                 alt={img}
                             />
                         </Parallax>
