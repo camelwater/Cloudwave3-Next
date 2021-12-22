@@ -29,7 +29,7 @@ const StyledButton = styled('button', {
         }
     }
 })
-export const ThemeToggle: React.FC<{ type: string }> = ({type}) => {
+export const ThemeToggle: React.FC<{ type }> = ({type}) => {
     const [mounted, setMounted] = useState(false);
     const { setTheme, resolvedTheme } = useTheme();
   
