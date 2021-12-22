@@ -52,10 +52,10 @@ export const MenuButton = styled('button', {
     justifyContent: 'center',
     transition: '0.5s linear',
     '&:hover': {
-        color: 'GoldenRod',
+        color: '$hover',
         transform: 'rotate(180deg)'
     },
-    '@media only screen and (min-width: 650px)': {
+    '@media only screen and (min-width: 700px)': {
       display: 'none',
     },
 })
@@ -74,7 +74,7 @@ export const SubMenuLevel = styled('div', {
     margin: '0 10px 20px 10px',
     transition: '0.25s linear',
     '&:hover': {
-        color: 'GoldenRod'
+        color: '$hover'
     }
 })
 export const MenuLink = styled('a', {
@@ -86,7 +86,7 @@ export const MenuLink = styled('a', {
     margin: '0 10px 20px 10px',
     transition: '0.25s linear',
     '&:hover': {
-        color: 'GoldenRod'
+        color: '$hover'
     }
   })
 
@@ -136,7 +136,7 @@ export const SubMenuArea = styled('div', {
 
 export const BottomMenu = styled('div', {
     background: '$primary',
-    borderTop: '1px solid GoldenRod',
+    borderTop: '1px solid $hover',
     paddingLeft: '1rem',
     paddingRight: '1rem',
     display: 'flex',
@@ -145,6 +145,7 @@ export const BottomMenu = styled('div', {
     left: 0,
     right: 0,
     alignItems: 'center',
+    justifyContent: 'space-around',
     height: '75px',
     width: '65%',
     zIndex: 99999999
@@ -165,10 +166,10 @@ export const SubMenu = styled('div', {
         background: '$primary',
     },
     '&::-webkit-scrollbar-thumb': {
-        background: 'GoldenRod',
+        background: '$main',
     },
     '&::-webkit-scrollbar-thumb:hover': {
-        background: 'PaleGoldenRod',
+        background: '$hover',
     }
     
 })
@@ -182,7 +183,7 @@ export const SubMenuLink = styled('a', {
     margin: '0 10px 20px 10px',
     transition: '0.25s linear',
     '&:hover': {
-        color: 'GoldenRod'
+        color: '$hover'
     }
 })
 
@@ -192,8 +193,8 @@ export const SubMenuButton = styled('button', {
     // top: '3%',
     // right: '-100%',
     // marginLeft: '-75px',
-    position: 'absolute',
-    right: '5%',
+    // position: 'absolute',
+    // right: '5%',
     zIndex: 999999999,
     background: 'none',
     outline: 'none',
@@ -203,9 +204,9 @@ export const SubMenuButton = styled('button', {
     alignContent: 'center',
     justifyContent: 'right',
     transition: '0.25s linear',
-    color: 'GoldenRod',
+    color: '$main',
     '&:hover': {
-        color: 'LightGoldenRodYellow',
+        color: '$hover',
         transform: 'rotate(180deg)'
     },
     // '@media only screen and (min-width: 650px)': {

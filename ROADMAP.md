@@ -9,12 +9,12 @@
 - [ ] Contact page
 - [ ] TOS + Privacy pages
 - [x] Markdown files for content of individual pages
-- [x] Images on pages that need them (implement React-Scroll-Parallax)
+- [x] Images on pages that need them + animated images (react-scroll-parallax)
 
 ## Version 0.2
 - [ ] Hover drop-down sub-menus for desktop
-- [ ] Transitioning navigation sub-menus for mobile
+- [x] Transitioning navigation sub-menus for mobile
 - [ ] Contact page uses email form
 
 ## Version 0.3
-- [ ] Dark mode/Light mode toggle
+- [x] Dark mode/Light mode toggle

@@ -5,6 +5,7 @@ import React from 'react';
 import * as Icons from 'react-feather';
 import { CSSTransition } from 'react-transition-group';
 import SmoothScroll from '@components/Scroll';
+import { ThemeToggle } from '@components/ThemeToggle';
 
 
 const NavigationComponent: React.FC = () => {
@@ -111,6 +112,7 @@ const NavigationComponent: React.FC = () => {
                             ))}
                         </NavMenu.SubMenu>
                         <NavMenu.BottomMenu>
+                            <ThemeToggle type='mobile' />
                             <NavMenu.SubMenuButton onClick={() => setMenu(null)}>
                                 <Icons.ChevronsLeft width={50} height={50}/>
                             </NavMenu.SubMenuButton>
@@ -123,24 +125,27 @@ const NavigationComponent: React.FC = () => {
 
             <NavBar.Nav>
                 <NavBar.NavContainer>
-                    <Link href='/' passHref={true}>
-                        <NavBar.TitleLinkText>cloudwave3</NavBar.TitleLinkText>
-                    </Link>
-                        <NavBar.NavLinks>
-                            {Links.map((entry, index) => (
-                                <Link href={entry.link} key={index} passHref={true}>
-                                    <NavBar.NavLink
-                                    // onMouseOut={() => setMenu(entry.name)} 
-                                    // onMouseOver={() => setMenu(null)}
-                                    >
-                                        {entry.name}
-                                    </NavBar.NavLink> 
-                                    {/* {menu===entry.name &&
+                    <NavBar.LinksContainer>
+                        <Link href='/' passHref={true}>
+                            <NavBar.TitleLinkText>cloudwave3</NavBar.TitleLinkText>
+                        </Link>
+                            <NavBar.NavLinks>
+                                {Links.map((entry, index) => (
+                                    <Link href={entry.link} key={index} passHref={true}>
+                                        <NavBar.NavLink
+                                        // onMouseOut={() => setMenu(entry.name)} 
+                                        // onMouseOver={() => setMenu(null)}
+                                        >
+                                            {entry.name}
+                                        </NavBar.NavLink> 
+                                        {/* {menu===entry.name &&
 
-                                    } */}
-                                </Link>
-                            ))}
-                        </NavBar.NavLinks>
+                                        } */}
+                                    </Link>
+                                ))}
+                            </NavBar.NavLinks>
+                    </NavBar.LinksContainer>
+                    <ThemeToggle type='desktop' />
                     <NavMenu.MenuButton onClick={ToggleNav}>
                         <Icons.Menu />
                     </NavMenu.MenuButton>

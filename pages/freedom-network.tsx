@@ -11,7 +11,7 @@ import NetworkComponent from '@components/FreedomPage/Network';
 
 
 const FreedomNetworkPage: React.FC<{ mdContent: string }> = ({ mdContent }) => {
-    globalStyle();
+    // globalStyle();
 
     return (
         <ContentWrapper>

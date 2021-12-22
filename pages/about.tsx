@@ -11,7 +11,6 @@ import { getMdContent } from '@lib/readMd';
 
 
 const AboutPage: React.FC<{ mdContent: string }> = ({ mdContent }) => {
-    globalStyle();
 
     return (
         <ContentWrapper>

@@ -8,7 +8,7 @@ export const Nav = styled('nav', {
     top: 0,
     left: 0,
     right: 0,
-    background: '$dark',
+    background: '$background',
     alignItems: 'center',
     height: 100,
     width: '100vw',
@@ -18,8 +18,9 @@ export const NavContainer = styled('div', {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: '65%',
-    '@media only screen and (max-width: 650px)': {
+    width: '75%',
+    maxWidth: '1200px',
+    '@media only screen and (max-width: 700px)': {
         width: '80%',
         justifyContent: 'space-around !important',
     },
@@ -28,6 +29,17 @@ export const NavContainer = styled('div', {
         justifyContent: 'center',
     },
 })
+
+export const LinksContainer = styled('div', {
+    display: 'flex',
+    justifyContent: 'left',
+    alignItems: 'center',
+    width: '90%',
+    '@media (max-width: 700px)': {
+        width: '50%'
+    }
+})
+
 
 export const TitleLinkText = styled('a', {
     fontFamily: '$mono',
@@ -57,7 +69,7 @@ export const TitleLinkText = styled('a', {
 
 export const NavLinks = styled('div', {
     display: 'flex',
-    '@media only screen and (max-width: 650px)': {
+    '@media only screen and (max-width: 700px)': {
         display: 'none',
     },
 })
@@ -70,7 +82,10 @@ export const NavLink = styled('a', {
     fontFamily: '$main',
     transition: '0.25s linear',
     '&:hover': {
-        color: '$white',
+        color: '$hover',
+    },
+    '@iPadPro':{
+        fontSize: '$2'
     },
     '@iPad': {
         margin: '0 10px'

@@ -11,7 +11,6 @@ import { getBlockContent } from '@lib/readMd';
 
 
 const SolutionsPage: React.FC<{ contentData }> = ({ contentData }) => {
-    globalStyle();
 
     return (
         <ContentWrapper>

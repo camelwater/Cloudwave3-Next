@@ -107,7 +107,7 @@ export const mdContentContainer = styled('div', {
     h2: {
         marginTop: 100,
         marginBottom: 30,
-        color: 'GoldenRod',
+        color: '$hover',
         fontSize: '$5'
     },
     h3: {

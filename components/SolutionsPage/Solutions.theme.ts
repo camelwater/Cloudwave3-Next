@@ -1,6 +1,5 @@
 import { styled } from '@css/stitches.config';
 import Image from 'next/image';
-import { isPropertySignature } from 'typescript';
 
 export const Container = styled('div', {
     display: 'flex',
@@ -9,6 +8,7 @@ export const Container = styled('div', {
     marginTop: 100,
     marginBottom: 100,
     justifyContent: 'center',
+    // maxWidth: '1500px',
     // alignItems: 'center',
     '@iPadPro': {
         margin: '100px 0',
@@ -129,7 +129,6 @@ export const SImage = styled (Image, {
 })
 
 export const mdContentContainer = styled('div', {
-
     color: '$white',
     display: 'flex',
     flexDirection: 'column',
@@ -179,7 +178,7 @@ export const mdContentContainer = styled('div', {
     h2: {
         marginTop: 100,
         marginBottom: 30,
-        color: 'GoldenRod',
+        color: '$hover',
         fontSize: '$5'
     },
     h3: {

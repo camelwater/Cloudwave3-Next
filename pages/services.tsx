@@ -11,7 +11,6 @@ import ServiceComponent from '@components/ServicesPage/ServicesComponent';
 import { getBlockContent } from '@lib/readMd'
 
 const ServicesPage: React.FC<{ contentData: [] }> = ({ contentData }) => {
-    globalStyle();
 
     return (
         <ContentWrapper>

@@ -10,7 +10,6 @@ import FooterComponent from '@components/Footer/Footer';
 import SmoothScroll from '@components/Scroll';
 
 const HomePage: React.FC = () => {
-  globalStyle();
 
   return (
     <ContentWrapper>

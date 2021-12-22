@@ -13,12 +13,11 @@ const globalStyle = globalCss({
     overflowX: 'hidden',
   },
   body: {
-    background: '$dark',
+    background: '$background',
     overflowX: 'hidden',
     fontFamily: 'GTWalsheimPro',
   },
   '::selection': {
-    // background: '#4560F060',
     background: '#f3f6f040'
   },
   img: {
@@ -31,10 +30,10 @@ const globalStyle = globalCss({
     background: '$primary',
   },
   'body::-webkit-scrollbar-thumb': {
-    background: '$main',
+    background: '$scrollMain',
   },
   'body::-webkit-scrollbar-thumb:hover': {
-    background: '$main2',
+    background: '$scrollMain2',
   },
   'code, pre': {
     fontFamily: '$mono',
