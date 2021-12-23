@@ -12,6 +12,7 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
         dark: '#191919',
         white: '#F4F4F5',
         hover: 'GoldenRod',
+        // hover: '#d4550c',
         background: '#191919',
         highlight: '#f3f6f040',
         gradient:

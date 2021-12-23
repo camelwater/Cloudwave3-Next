@@ -24,12 +24,12 @@ const StyledButton = styled('button', {
                 }
             },
             mobile: {
-                '@media (min-width: 700px)': {
-                }
             }
         }
     }
 })
+
+
 export const ThemeToggle: React.FC<{ type }> = ({type}) => {
     const [mounted, setMounted] = useState(false);
     const { setTheme, resolvedTheme } = useTheme();

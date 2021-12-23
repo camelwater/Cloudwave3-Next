@@ -31,7 +31,7 @@ export const LinkText = styled('a', {
     marginRight: 15,
     transition: '0.15s linear',
     '&:hover': {
-        color: '$white',
+        color: '$hover',
         transform: 'scale(1.05, 1.05)'
     },  
     '@iPhonePlus': {
