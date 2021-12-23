@@ -98,6 +98,9 @@ const NavigationComponent: React.FC = () => {
                         ))}
                     </NavMenu.Menu>
                     <NavMenu.ProxyMenuContainer onClick={ToggleNav} />
+                    <NavMenu.BottomMenu variant='first' >
+                        <ThemeToggle type='mobile' />
+                    </NavMenu.BottomMenu>
                 </NavMenu.MenuContainer>
             </CSSTransition>
 
@@ -111,8 +114,7 @@ const NavigationComponent: React.FC = () => {
                                 </Link>
                             ))}
                         </NavMenu.SubMenu>
-                        <NavMenu.BottomMenu>
-                            <ThemeToggle type='mobile' />
+                        <NavMenu.BottomMenu variant='sub' >
                             <NavMenu.SubMenuButton onClick={() => setMenu(null)}>
                                 <Icons.ChevronsLeft width={50} height={50}/>
                             </NavMenu.SubMenuButton>

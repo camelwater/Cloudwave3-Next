@@ -33,13 +33,28 @@ export const Menu = styled('div', {
     position: 'fixed',
     left: 0,
     width: '37vw',
-    height: '125%',
+    height: '100%',
     background: '$primary',
     zIndex: 999999,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
+    padding: '3rem 1rem 7rem',
+    overflowX: 'hidden',
+    overflowY: 'scroll',
+    '&::-webkit-scrollbar': {
+        width: 5,
+    },
+    '&::-webkit-scrollbar-track': {
+        background: '$primary',
+    },
+    '&::-webkit-scrollbar-thumb': {
+        background: '$main',
+    },
+    '&::-webkit-scrollbar-thumb:hover': {
+        background: '$hover',
+    }
 })
 
 export const MenuButton = styled('button', {
@@ -147,7 +162,16 @@ export const BottomMenu = styled('div', {
     alignItems: 'center',
     justifyContent: 'space-around',
     height: '75px',
-    width: '65%',
+    variants: {
+        variant: {
+            first: {
+                width: '37vw'
+            },
+            sub: {
+                width: '65%',
+            }
+        }
+    },
     zIndex: 99999999
 })
 

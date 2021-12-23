@@ -18,7 +18,7 @@ const globalStyle = globalCss({
     fontFamily: 'GTWalsheimPro',
   },
   '::selection': {
-    background: '#f3f6f040'
+    background: '$highlight'
   },
   img: {
     userSelect: 'none',

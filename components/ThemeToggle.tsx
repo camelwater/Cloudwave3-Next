@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from 'next-themes';
 import * as Icons from 'react-feather';
-import { styled } from '@stitches/react';
+import { styled } from '@css/stitches.config';
 
 const StyledButton = styled('button', {
     background: 'none',
@@ -12,6 +12,7 @@ const StyledButton = styled('button', {
     alignItems: 'center',
     justifyContent: 'center',
     transition: '0.25s linear',
+    cursor: 'pointer',
     '&:hover': {
         color: '$hover',
     },

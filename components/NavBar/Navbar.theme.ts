@@ -25,7 +25,7 @@ export const NavContainer = styled('div', {
         justifyContent: 'space-around !important',
     },
     '@iPadPro': {
-        width: '100vw',
+        width: '95vw',
         justifyContent: 'center',
     },
 })
@@ -45,7 +45,7 @@ export const TitleLinkText = styled('a', {
     fontFamily: '$mono',
     fontSize: '$4',
     color: '$main',
-    marginLeft: 50,
+    // marginLeft: 50,
     textDecoration: 'none',
     transition: '0.2s linear',
     '&:hover': {

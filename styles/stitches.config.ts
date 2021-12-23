@@ -13,6 +13,7 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
         white: '#F4F4F5',
         hover: 'GoldenRod',
         background: '#191919',
+        highlight: '#f3f6f040',
         gradient:
           'linear-gradient(93.05deg, #EF9797 3.98%, rgba(206, 126, 199, 0.801616) 35.29%, #A364D6 68.78%, #A1D0F9 97.44%)',
       },
@@ -51,6 +52,7 @@ export const lightTheme = createTheme(({
     white: '#313131',
     background: '#F4F4F5',
     hover: '#4c2bce',
+    highlight: '#2e2e2e30',
     gradient:
       'linear-gradient(93.05deg, #EF9797 3.98%, rgba(206, 126, 199, 0.801616) 35.29%, #A364D6 68.78%, #A1D0F9 97.44%)',
   }, 
@@ -64,7 +66,6 @@ export const ContentWrapper = styled('div', {
 
 export const globalStyles = globalCss({
   "@light": {
-    // notice the `media` definition on the stitches.config.ts file
     ":root:not(.dark)": {
       ...Object.keys(lightTheme.colors).reduce((varSet, currentColorKey) => {
         const currentColor = lightTheme.colors[currentColorKey];
