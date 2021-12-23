@@ -16,7 +16,7 @@ const FreedomNetworkPage: React.FC<{ mdContent: string }> = ({ mdContent }) => {
     return (
         <ContentWrapper>
             <Head>
-                <title>Freedom Network - Cloudwave3</title>
+                <title>Freedom Network | Cloudwave3</title>
             </Head>
             <SmoothScroll />
             <NavigationComponent />

@@ -15,7 +15,7 @@ const SolutionsPage: React.FC<{ contentData }> = ({ contentData }) => {
     return (
         <ContentWrapper>
             <Head>
-                <title>Solutions - Cloudwave3</title>
+                <title>Solutions | Cloudwave3</title>
             </Head>
             <SmoothScroll />
             <NavigationComponent />

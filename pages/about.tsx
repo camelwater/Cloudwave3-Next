@@ -15,7 +15,7 @@ const AboutPage: React.FC<{ mdContent: string }> = ({ mdContent }) => {
     return (
         <ContentWrapper>
             <Head>
-                <title>About - Cloudwave3</title>
+                <title>About | Cloudwave3</title>
             </Head>
             <SmoothScroll />
             <NavigationComponent />
