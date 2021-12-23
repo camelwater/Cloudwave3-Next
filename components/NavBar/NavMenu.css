@@ -87,25 +87,6 @@
     transition: transform 300ms;
 }
 
-.bgblur-enter {
-    opacity: 0;
-    filter: 0;
-}
-
-.bgblur-enter-active {
-    opacity: 1;
-    filter: blur(5px);
-    transition: opacity 1100ms, filter 1000ms;
-}
-
-.bgblur-exit {
-    opacity: 1;
-}
-
-.bgblur-exit-active {
-    opacity: 0;
-    transition: opacity 300ms;
-}
 
 @keyframes color-rotation {
     from {

@@ -108,13 +108,13 @@ export const mdContentContainer = styled('div', {
         marginTop: 100,
         marginBottom: 30,
         color: '$hover',
-        fontSize: '$5'
+        fontSize: '$5',
     },
     h3: {
         marginTop: 35,
         marginBottom: 25,
         color: '$white',
-        fontSize: '$4'
+        fontSize: '$4',
     },
     pre: {
         borderRadius: 12,
@@ -128,7 +128,7 @@ export const mdContentContainer = styled('div', {
         color: '$main2',
         fontSize: '$3',
         margin: '10px 0',
-        zIndex: 999
+        zIndex: 999,
     },
     img: {
         borderRadius: 10,

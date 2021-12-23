@@ -8,10 +8,21 @@ export const Nav = styled('nav', {
     top: 0,
     left: 0,
     right: 0,
-    background: '$background',
+    background: '$navBackground',
+    borderBottom: '1px solid $lightBorder',
     alignItems: 'center',
-    height: 100,
     width: '100vw',
+
+    variants: {
+        variant: {
+            home: {
+                height: '100px'
+            },
+            rest: {
+                height: '75px'
+            }
+        }
+    }
   })
 
 export const NavContainer = styled('div', {
@@ -20,20 +31,21 @@ export const NavContainer = styled('div', {
     alignItems: 'center',
     width: '75%',
     maxWidth: '1200px',
-    '@media only screen and (max-width: 700px)': {
-        width: '80%',
-        justifyContent: 'space-around !important',
-    },
     '@iPadPro': {
         width: '95vw',
         justifyContent: 'center',
     },
+    '@media only screen and (max-width: 700px)': {
+        width: '80%',
+        justifyContent: 'space-around !important',
+    },
+
 })
 
 export const LinksContainer = styled('div', {
     display: 'flex',
     justifyContent: 'left',
-    alignItems: 'center',
+    alignItems: 'baseline',
     width: '90%',
     '@media (max-width: 700px)': {
         width: '50%'
@@ -45,7 +57,7 @@ export const TitleLinkText = styled('a', {
     fontFamily: '$mono',
     fontSize: '$4',
     color: '$main',
-    // marginLeft: 50,
+    marginRight: '15px',
     textDecoration: 'none',
     transition: '0.2s linear',
     '&:hover': {
@@ -76,7 +88,7 @@ export const NavLinks = styled('div', {
 
 export const NavLink = styled('a', {
     color: '$main',
-    fontSize: '$3',
+    fontSize: '$2',
     textDecoration: 'none',
     margin: '0 15px',
     fontFamily: '$main',

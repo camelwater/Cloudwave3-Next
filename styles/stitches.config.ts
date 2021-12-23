@@ -14,6 +14,8 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
         hover: 'GoldenRod',
         // hover: '#d4550c',
         background: '#191919',
+        navBackground: '#171717',
+        lightBorder: '#141414',
         highlight: '#f3f6f040',
         gradient:
           'linear-gradient(93.05deg, #EF9797 3.98%, rgba(206, 126, 199, 0.801616) 35.29%, #A364D6 68.78%, #A1D0F9 97.44%)',
@@ -48,10 +50,12 @@ export const lightTheme = createTheme(({
     scrollMain2: '#363c44',
     main: '#36414e',
     main2: '#556275',
-    primary: '#bebebe',
+    primary: '#e2e2e2',
     dark: '#F4F4F5',
     white: '#313131',
-    background: '#F4F4F5',
+    background: '#eeeeee',
+    navBackground: '#f1f1f1',
+    lightBorder: '#e4e4e4',
     hover: '#4c2bce',
     highlight: '#2e2e2e30',
     gradient:

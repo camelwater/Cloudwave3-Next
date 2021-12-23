@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
         <title>Cloudwave3</title>
       </Head>
       <SmoothScroll />
-      <NavigationComponent />
+      <NavigationComponent isHome/>
       <HomeComponent />
       <DescriptionComponent />
       <ToolsComponent />

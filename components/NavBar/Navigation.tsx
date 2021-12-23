@@ -8,7 +8,7 @@ import SmoothScroll from '@components/Scroll';
 import { ThemeToggle } from '@components/ThemeToggle';
 
 
-const NavigationComponent: React.FC = () => {
+const NavigationComponent: React.FC<{isHome?: boolean}> = ({isHome}) => {
 
     const [nav, setNav] = React.useState<boolean>(false);
     const [menu, setMenu] = React.useState<string>(null);
@@ -78,6 +78,20 @@ const NavigationComponent: React.FC = () => {
         ]
     };
 
+    const SubMenuLinks: React.FC<{entry}> = ({entry}) => {
+        return (
+            <>
+                {
+                    entry.name in subMenus && subMenus[entry.name].map((subEntry, subIndex) => (
+                        <Link href={subEntry.link} key={subIndex} passHref={true}>
+                            <NavMenu.SubMenuLink onClick={ToggleNav}>{subEntry.name}</NavMenu.SubMenuLink>
+                        </Link>
+                    ))
+                }
+            </>
+        );
+    }
+
     return (
         <> 
             <SmoothScroll isNav={true} />
@@ -85,17 +99,27 @@ const NavigationComponent: React.FC = () => {
             <CSSTransition in={(nav && !(menu in subMenus))} timeout={300} classNames='menu' unmountOnExit>
                 <NavMenu.MenuContainer>
                     <NavMenu.Menu>
-                        {Links.map((entry, index) => (
-                            (entry.name in subMenus) ? 
-                                <NavMenu.SubMenuLevel key={index} onClick={() => setMenu(entry.name)}>
-                                    {entry.name} 
-                                    <Icons.ChevronRight style={{ marginLeft: 7, height: 15, width: 15, marginTop: 2.5 }}/>
-                                </NavMenu.SubMenuLevel>
-                            :
-                                <Link href={entry.link} key={index} passHref={true}>
-                                    <NavMenu.MenuLink onClick={ToggleNav}>{entry.name}</NavMenu.MenuLink>
-                                </Link>
+                        {
+                            Links.map((entry, index) => (
+                                <>
+                                    <Link href={entry.link} key={index} passHref={true}>
+                                        <NavMenu.MenuLink onClick={ToggleNav}>{entry.name}</NavMenu.MenuLink>
+                                    </Link>
+
+                                    <SubMenuLinks entry={entry} />
+                                </>
                         ))}
+                        
+                             {/* (entry.name in subMenus) ? 
+                                 <NavMenu.SubMenuLevel key={index} onClick={() => setMenu(entry.name)}>
+                                    {entry.name} 
+                                     <Icons.ChevronRight style={{ marginLeft: 7, height: 15, width: 15, marginTop: 2.5 }}/>
+                                </NavMenu.SubMenuLevel>
+                             :
+                                 <Link href={entry.link} key={index} passHref={true}>
+                                     <NavMenu.MenuLink onClick={ToggleNav}>{entry.name}</NavMenu.MenuLink>
+                                 </Link> */}
+                        
                     </NavMenu.Menu>
                     <NavMenu.ProxyMenuContainer onClick={ToggleNav} />
                     <NavMenu.BottomMenu variant='first' >
@@ -104,7 +128,7 @@ const NavigationComponent: React.FC = () => {
                 </NavMenu.MenuContainer>
             </CSSTransition>
 
-            <CSSTransition in={nav && (menu in subMenus)} timeout={300} classNames='sub-menu' unmountOnExit>
+            {/* <CSSTransition in={nav && (menu in subMenus)} timeout={300} classNames='sub-menu' unmountOnExit>
                 <NavMenu.SubMenuContainer>
                     <NavMenu.SubMenuArea>
                         <NavMenu.SubMenu>
@@ -123,9 +147,9 @@ const NavigationComponent: React.FC = () => {
                     
                     <NavMenu.SubMenuBlurArea onClick={ToggleNav}/>
                 </NavMenu.SubMenuContainer>
-            </CSSTransition>
+            </CSSTransition> */}
 
-            <NavBar.Nav>
+            <NavBar.Nav variant={isHome?'home':'rest'}>
                 <NavBar.NavContainer>
                     <NavBar.LinksContainer>
                         <Link href='/' passHref={true}>

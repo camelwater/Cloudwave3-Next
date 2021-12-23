@@ -8,6 +8,8 @@ const globalStyle = globalCss({
     boxSizing: 'border-box',
     // cursor: 'none !important',
     scrollBehavior: 'smooth',
+    transition: '0.15s linear'
+
   },
   html: {
     overflowX: 'hidden',
@@ -24,13 +26,16 @@ const globalStyle = globalCss({
     userSelect: 'none',
   },
   'body::-webkit-scrollbar': {
-    width: 10,
+    width: '11px',
   },
   'body::-webkit-scrollbar-track': {
     background: '$primary',
+    width: '15px'
   },
   'body::-webkit-scrollbar-thumb': {
     background: '$scrollMain',
+    borderRadius: '5px',
+    border: '2px solid $primary'
   },
   'body::-webkit-scrollbar-thumb:hover': {
     background: '$scrollMain2',
