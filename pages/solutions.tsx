@@ -4,7 +4,7 @@ import { ContentWrapper } from '@css/stitches.config';
 import globalStyle from '@css/global.style';
 import 'animate.css/animate.min.css';
 import SmoothScroll from '@components/Scroll';
-import NavigationComponent from '@components/NavBar/Navigation';
+import NavigationComponent from '@components/Nav/Navigation';
 import FooterComponent from '@components/Footer/Footer';
 import SolutionComponent from '@components/SolutionsPage/SolutionsComponent';
 import { getBlockContent } from '@lib/readMd';

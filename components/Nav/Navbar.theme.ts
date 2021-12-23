@@ -70,10 +70,10 @@ export const TitleLinkText = styled('a', {
         animationDirection: 'alternate',
         transform: 'scale(1.1, 1.1)'
     },
-    '@Flip': {
-    //   fontSize: '$2',
-      display: 'flex !important',
-    },
+    // '@Flip': {
+    // //   fontSize: '$2',
+    //   display: 'flex !important',
+    // },
     '@iPhoneSE': {
       fontSize: '$2',
     },
