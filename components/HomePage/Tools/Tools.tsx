@@ -1,5 +1,5 @@
 import * as Theme from './Tools.theme';
-import * as Icons from 'react-feather';
+import * as Icons from 'react-icons/fi';
 import ScrollAnimation from 'react-animate-on-scroll';
 import React from 'react';
 
@@ -69,7 +69,7 @@ const ToolsComponent: React.FC = () => {
                             key={index}
                         >
                             <Theme.ToolsGridText>
-                                <Icons.Box style={{ margin: 5 }}/>
+                                <Icons.FiBox style={{ margin: 5 }}/>
                                 <Theme.ToolsTextLink href={tool.link} target='_blank'>{tool.name}</Theme.ToolsTextLink>
                             </Theme.ToolsGridText>
                         </ScrollAnimation>

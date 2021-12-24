@@ -2,10 +2,11 @@ import Link from 'next/link';
 import * as NavBar from './Navbar.theme';
 import * as NavMenu from './Navmenu.theme';
 import React from 'react';
-import * as Icons from 'react-feather';
 import { CSSTransition } from 'react-transition-group';
 // import SmoothScroll from '@components/Scroll';
 import { ThemeToggle } from '@components/ThemeToggle';
+import { NavDropdown } from './Dropdown';
+import { HiMenuAlt4 } from 'react-icons/hi';
 
 
 const NavigationComponent: React.FC<{isHome?: boolean}> = ({isHome}) => {
@@ -124,25 +125,29 @@ const NavigationComponent: React.FC<{isHome?: boolean}> = ({isHome}) => {
                         <Link href='/' passHref={true}>
                             <NavBar.TitleLinkText>cloudwave3</NavBar.TitleLinkText>
                         </Link>
-                            <NavBar.NavLinks>
+                            <NavBar.NavItems>
                                 {Links.map((entry, index) => (
-                                    <Link href={entry.link} key={index} passHref={true}>
-                                        <NavBar.NavLink
-                                        // onMouseOut={() => setMenu(entry.name)} 
-                                        // onMouseOver={() => setMenu(null)}
-                                        >
-                                            {entry.name}
-                                        </NavBar.NavLink> 
-                                        {/* {menu===entry.name &&
-
-                                        } */}
-                                    </Link>
+                                    entry.name in subMenus ? (
+                                        <NavDropdown 
+                                            key={index}
+                                            page={isHome?'home':'rest'}
+                                            section={entry}
+                                            idx={index}
+                                            items={subMenus[entry.name]}
+                                        />                                            
+                                    ) : (
+                                        <Link href={entry.link} key={index} passHref={true}>
+                                            <NavBar.NavLink>
+                                                {entry.name}
+                                            </NavBar.NavLink> 
+                                        </Link>
+                                    )
                                 ))}
-                            </NavBar.NavLinks>
+                            </NavBar.NavItems>
                     </NavBar.LinksContainer>
                     <ThemeToggle type='desktop' />
                     <NavMenu.MenuButton onClick={ToggleNav}>
-                        <Icons.Menu />
+                        <HiMenuAlt4 size={30}/>
                     </NavMenu.MenuButton>
                 </NavBar.NavContainer>
             </NavBar.Nav>

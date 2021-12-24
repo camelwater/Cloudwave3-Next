@@ -11,6 +11,9 @@ const globalStyle = globalCss({
     transition: '0.15s linear'
 
   },
+  svg: {
+    transition: '0s'
+  },
   html: {
     overflowX: 'hidden',
   },

@@ -12,8 +12,8 @@
 - [x] Images on pages that need them + animated images (react-scroll-parallax)
 
 ## Version 0.2
-- [ ] Hover drop-down sub-menus for desktop
-- [x] Transitioning navigation sub-menus for mobile
+- [x] Hover drop-down sub-menus for desktop
+- [x] Transitioning sub-menu navigation for mobile
 - [ ] Contact page uses email form
 
 ## Version 0.3

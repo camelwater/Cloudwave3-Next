@@ -1,4 +1,5 @@
-import { styled } from '@css/stitches.config'
+import { styled } from '@css/stitches.config';
+
 
 export const Nav = styled('nav', {
     display: 'flex',
@@ -23,7 +24,7 @@ export const Nav = styled('nav', {
             }
         }
     }
-  })
+})
 
 export const NavContainer = styled('div', {
     display: 'flex',
@@ -49,7 +50,8 @@ export const LinksContainer = styled('div', {
     width: '90%',
     '@media (max-width: 700px)': {
         width: '50%'
-    }
+    },
+    // border: '1px solid green',
 })
 
 
@@ -59,7 +61,7 @@ export const TitleLinkText = styled('a', {
     color: '$main',
     marginRight: '15px',
     textDecoration: 'none',
-    transition: '0.2s linear',
+    transition: '0.1s linear',
     '&:hover': {
         background: '$gradient',
         backgroundClip: 'text',
@@ -70,6 +72,9 @@ export const TitleLinkText = styled('a', {
         animationDirection: 'alternate',
         transform: 'scale(1.1, 1.1)'
     },
+    '&:active': {
+        transform: 'scale(0.95, 0.95)'
+    },
     // '@Flip': {
     // //   fontSize: '$2',
     //   display: 'flex !important',
@@ -79,12 +84,6 @@ export const TitleLinkText = styled('a', {
     },
   })
 
-export const NavLinks = styled('div', {
-    display: 'flex',
-    '@media only screen and (max-width: 700px)': {
-        display: 'none',
-    },
-})
 
 export const NavLink = styled('a', {
     color: '$main',
@@ -96,12 +95,21 @@ export const NavLink = styled('a', {
     '&:hover': {
         color: '$hover',
     },
-    '@iPadPro':{
-        fontSize: '$2'
-    },
+    // '@iPadPro':{
+    //     fontSize: '$2'
+    // },
     '@iPad': {
         margin: '0 10px'
     }
+})
+
+export const NavItems = styled('div', {
+    display: 'flex',
+    '@media only screen and (max-width: 700px)': {
+        display: 'none',
+    },
+    alignItems: 'baseline',
+
 })
 
 // individual sub menus in the nav bar

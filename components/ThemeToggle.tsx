@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from 'next-themes';
-import * as Icons from 'react-feather';
+import { FaSun } from 'react-icons/fa';
+import { RiMoonFill } from 'react-icons/ri';
 import { styled } from '@css/stitches.config';
 
 const StyledButton = styled('button', {
@@ -11,10 +12,14 @@ const StyledButton = styled('button', {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    transition: '0.25s linear',
+    transition: '0.125s linear',
     cursor: 'pointer',
     '&:hover': {
         color: '$hover',
+        transform: 'scale(1.1, 1.1)'
+    },
+    '&:active': {
+        transform: 'scale(0.9, 0.9)'
     },
     variants: {
         variant: {
@@ -46,7 +51,7 @@ export const ThemeToggle: React.FC<{ type }> = ({type}) => {
 
     return (
       <StyledButton variant={type} onClick={toggleTheme}>
-        { resolvedTheme === 'light'? <Icons.Moon /> : <Icons.Sun /> }
+        { resolvedTheme === 'light'? <RiMoonFill size={25}/> : <FaSun size={25}/> }
       </StyledButton>
     );
 }

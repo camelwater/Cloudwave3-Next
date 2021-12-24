@@ -67,10 +67,14 @@ export const MenuButton = styled('button', {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    transition: '0.25s linear',
+    transition: '0.15s linear',
+    cursor: 'pointer',
     '&:hover': {
         color: '$hover',
         // transform: 'rotate(180deg)'
+    },
+    '&:active': {
+        transform: 'scale(0.75, 0.75)'
     },
     '@media only screen and (min-width: 700px)': {
       display: 'none',

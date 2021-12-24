@@ -1,6 +1,6 @@
 import * as Theme from './Description.theme';
 import ScrollAnimation from 'react-animate-on-scroll';
-import * as Icons from 'react-feather';
+import * as Icons from 'react-icons/fi';
 import React from 'react';
 
 
@@ -39,7 +39,7 @@ const DescriptionComponent: React.FC = () => {
                     {stuff.map((thing, index) => (
                         <ScrollAnimation animateIn='animate__flipInX' animateOnce={true} key={index}>
                             <Theme.StuffText>
-                                <Icons.ArrowRightCircle style={{ marginRight: 7 }} />
+                                <Icons.FiArrowRightCircle style={{ marginRight: 7 }} />
                                 {thing}
                             </Theme.StuffText>
                         </ScrollAnimation>
