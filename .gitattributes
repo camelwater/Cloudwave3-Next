@@ -1,1 +1,1 @@
-*.tsx linguist-language=Python linguist-detectable
+*.tsx linguist-language=TypeScript linguist-detectable
