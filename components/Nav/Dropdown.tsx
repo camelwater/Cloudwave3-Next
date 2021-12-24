@@ -183,9 +183,8 @@ export const NavDropdown: React.FC<{ section, items, page }> = ({ section, items
             <DropdownList variant={page}>
                 {
                     items.map((item, index) => (
-                        <Link href={item.link} passHref={true}>
-                            <DropdownItem key={index}>
-                                
+                        <Link href={item.link} passHref={true} key={index}>
+                            <DropdownItem>
                                     <SubLink>{item.name}</SubLink>
                             </DropdownItem>
                         </Link>
@@ -194,8 +193,6 @@ export const NavDropdown: React.FC<{ section, items, page }> = ({ section, items
                 }
                 
             </DropdownList>
-            
-
         </NavListItem> 
     );
 }
