@@ -132,7 +132,6 @@ const NavigationComponent: React.FC<{isHome?: boolean}> = ({isHome}) => {
                                             key={index}
                                             page={isHome?'home':'rest'}
                                             section={entry}
-                                            idx={index}
                                             items={subMenus[entry.name]}
                                         />                                            
                                     ) : (
