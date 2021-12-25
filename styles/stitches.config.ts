@@ -11,7 +11,7 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
         primary: '#37393E',
         dark: '#191919',
         white: '#F4F4F5',
-        dropdownHover: '#070707',
+        dropdownHover: '#050505',
         hover: 'GoldenRod',
         // hover: '#d4550c',
         background: '#191919',
