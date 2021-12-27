@@ -41,7 +41,7 @@ export const Menu = styled('div', {
     flexDirection: 'column',
     // justifyContent: 'center',
     // textAlign: 'center',
-    padding: '5rem 1rem 7rem',
+    padding: '5rem 1rem 5rem',
     overflowX: 'hidden',
     overflowY: 'scroll',
     '&::-webkit-scrollbar': {

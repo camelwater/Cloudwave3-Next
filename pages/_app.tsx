@@ -1,6 +1,7 @@
 import '@components/Nav/NavMenu.css';
 import { ThemeProvider } from 'next-themes';
 import { lightTheme } from '@css/stitches.config';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 export default function App({ Component, pageProps }) {
     return (
@@ -11,8 +12,10 @@ export default function App({ Component, pageProps }) {
                 light: lightTheme.className,
                 dark: "dark",
             }}
-        >
-            <Component {...pageProps} />
+        >   
+            <ParallaxProvider>
+                <Component {...pageProps} />
+            </ParallaxProvider>
         </ThemeProvider>
     );
 }

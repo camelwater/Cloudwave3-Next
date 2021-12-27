@@ -1,6 +1,6 @@
-import { styled } from '@css/stitches.config';
+import { styled as sstyled } from '@css/stitches.config';
 
-export const Container = styled('div', {
+export const Container = sstyled('div', {
     display: 'flex',
     flexDirection: 'column',
     // margin: '100px 100px',
@@ -14,7 +14,7 @@ export const Container = styled('div', {
       },
 })
 
-export const ServiceContainer = styled('div', {
+export const ServiceContainer = sstyled('div', {
     display: 'flex',
     flexDirection: 'column',
     // marginLeft: 400,
@@ -30,7 +30,7 @@ export const ServiceContainer = styled('div', {
     },
 })
 
-export const ServiceContentContainer = styled('div', {
+export const ServiceContentContainer = sstyled('div', {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -46,7 +46,7 @@ export const ServiceContentContainer = styled('div', {
     },
 })
 
-export const TitleText = styled('h1', {
+export const TitleText = sstyled('h1', {
     display: 'inline-block',
     background: '$gradient',
     width: 'fit-content',
@@ -61,17 +61,38 @@ export const TitleText = styled('h1', {
     }    
 })
 
-export const ImgBox = styled('div', {
+export const ImgBox = sstyled('div', {
     zIndex: 9,
     display: 'flex',
-    position: 'relative',
+    // position: 'relative',
     width: 600,
-    '@iPadPro': {
-      display: 'none',
-    },
-  })
+    variants: {
+        img: {
+            cloud: {
+                marginTop: 150,
+                width: '30vw', 
+                height: '30vw', 
+                marginRight: '3vw',
+                '@iPadPro': {
+                    marginTop: 75,
+                    width: '45vw',
+                    height: '45vw',
+                    marginRight: 0
+                }
+            }
+        },
+        variant: {
+            dontKeep: {
+                '@iPadPro': {
+                    display: 'none',
+                },
+            }
+        }
+    }  
+})
 
-export const mdContentContainer = styled('div', {
+
+export const mdContentContainer = sstyled('div', {
 
     color: '$white',
     display: 'flex',
@@ -79,10 +100,25 @@ export const mdContentContainer = styled('div', {
     // margin: '50px 100px',
     marginLeft: '5vw',
     width: '100%',
-    maxWidth: '35vw',
+    variants: {
+        variant: {
+            normal: {
+                maxWidth: '45vw',
+                '@iPadPro': {
+                    maxWidth: '75vw'
+                }
+            },
+            img: {
+                maxWidth: '40vw',
+                '@iPadPro': {
+                    maxWidth: '75vw'
+                }
+            }
+        }
+    },
     zIndex: 99,
     '@iPadPro': {
-        width: '100%',
+        width: '85%',
         maxWidth: '50vw',
         margin: '0 30px',
         justifyContent: 'center',

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as Icons from 'react-icons/bs';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { styled as sstyled } from '@css/stitches.config';
 
+// const [isOpen, setOpen] = useState<boolean>(false);
 
 const DropdownTitle = sstyled('span', {
     display: 'flex',
@@ -30,37 +31,6 @@ const NavItemText = sstyled('a', {
     
 })
 
-// const DropdownList = sstyled('ul', {
-//     margin: '0',
-//     position: 'absolute',
-//     listStyleType: 'none',
-//     listStyleImage: 'none',
-//     top: '100%',
-//     width: 'auto',
-//     borderRadius: '0.5rem',
-//     background: '$dark',
-//     border: '1px solid $hover',
-//     paddingTop: '1rem',
-//     paddingBottom: '1rem',
-//     marginLeft: '-.25rem',
-
-//     transition: '0.2s linear',
-//     opacity: 0,
-//     rotateX: -15,
-//     display: 'none',
-
-//     variants: {
-//         variant: {
-//             home: {
-//                 marginTop: '-1.5rem',
-//             },
-//             rest: {
-//                 marginTop: '-1rem'
-//             }
-//         }
-//     }
-
-// })
 
 const ProxyTitle = sstyled('a', {
     position: 'absolute',
@@ -69,6 +39,10 @@ const ProxyTitle = sstyled('a', {
     fontSize: '$2',
     alignItems: 'center',
     fontFamily: '$main',
+    transition: '0.1s linear',
+    opacity: 0,
+    zIndex: 9,
+
     variants: {
         variant: {
             home: {
@@ -79,8 +53,6 @@ const ProxyTitle = sstyled('a', {
             }
         }
     },
-    opacity: 0,
-    zIndex: 9,
 })
 
 const ProxyDropList = sstyled('ul', {
@@ -92,28 +64,46 @@ const ProxyDropList = sstyled('ul', {
     top: 0,
 })
 
-const DropList = sstyled('ul', {
+const DropdownList = sstyled('ul', {
     background: '$dropdownBackground',
     border: '1px solid $dropdownBorder',
     zIndex: 99,
+    display: 'block',
+    visibility: 'hidden',
+    position: 'absolute',
+    margin: 0,
+    width: 'auto',
+    borderRadius: '0.5rem',
+    paddingTop: '0.5rem',
+    paddingBottom: '0.5rem',
+
+    variants: {
+        variant: {
+            home: {
+                marginTop: '-.75rem'
+            },
+            rest: {
+                marginTop: '-.5rem'
+            }
+        }
+    },
+    opacity: 0,
+    top: '90%',
+    transition: '0.1s linear',
 })
 
-const DropdownList = styled(DropList)`
-    margin: 0;
-    position: absolute;
-    margin-top: ${(props) => (props.variant==='home' ? `-.75rem` : `-.5rem`)};
-    list-style-type: none;
-    list-style-image: none;
-    top: 100%;
-    width: auto;
-    border-radius: 0.5em;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    display: none;
-    opacity: 0;
-    rotateX: -15;
-    transition-duration: 100ms;
-`
+// const DropdownList = styled(DropList)`
+//     margin: 0;
+//     position: absolute;
+//     margin-top: ${(props) => (props.variant==='home' ? `-.75rem` : `-.5rem`)};
+//     list-style-type: none;
+//     list-style-image: none;
+//     top: 100%;
+//     width: auto;
+//     border-radius: 0.5em;
+//     padding-top: 0.5rem;
+//     padding-bottom: 0.5rem;
+// `
 
 const NavListItem = sstyled('div', {
     display: 'flex',
@@ -123,19 +113,15 @@ const NavListItem = sstyled('div', {
         margin: '0 10px'
     },
     [`&:hover ${DropdownList}`]: {
-        display: 'block',
         opacity: 1,
-        rotateX: 0,
+        top: '100%',
+        visibility: 'visible'
+        
     },
     [`&:hover ${ProxyTitle}`]: {
         display: 'flex',
     },
 
-    [`${ProxyDropList}:hover ${DropdownList}`]: {
-        display: 'block',
-        opacity: 1,
-        rotateX: 0,
-    },
 })
 
 const DropdownItem = sstyled('div', {
@@ -144,7 +130,7 @@ const DropdownItem = sstyled('div', {
     transition: '0.1s linear',
     '&:hover': {
         color: '$hover',
-        background: '$dropdownHover'
+        background: '$dropdownHover',
     },
     
 })

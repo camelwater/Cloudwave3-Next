@@ -27,8 +27,7 @@ const SingleSolution: React.FC<{ mdContent, title: string, img: string, identifi
                         alt={img}
 
                     />
-                    <ParallaxProvider>
-                        <Theme.ParallaxImgContainer style={{ }}>
+                        <Theme.ParallaxImgContainer>
                             <Parallax x={ [-10, 10] }>
                                 <Image
                                     priority
@@ -39,7 +38,6 @@ const SingleSolution: React.FC<{ mdContent, title: string, img: string, identifi
                                 />
                             </Parallax>
                         </Theme.ParallaxImgContainer>
-                    </ParallaxProvider>
                 </Theme.ParallaxBackgroundImgContainer>
             :
                 <Theme.ImgContainer>

@@ -7,6 +7,7 @@ export const Container = styled('div', {
     alignItems: 'center',
     height: '100vh',
     width: '100vw',
+    marginBottom: '25vw',
     maxHeight: 1280,
     '@media only screen and (min-width: 3000px)': {
       height: '100vh',

@@ -19,8 +19,8 @@ const HomePage: React.FC = () => {
       <SmoothScroll />
       <NavigationComponent isHome/>
       <HomeComponent />
-      <DescriptionComponent />
-      <ToolsComponent />
+      {/* <DescriptionComponent />
+      <ToolsComponent /> */}
       <FooterComponent />
     </ContentWrapper>
   );

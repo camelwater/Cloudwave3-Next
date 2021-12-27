@@ -57,6 +57,10 @@ const NavigationComponent: React.FC<{isHome?: boolean}> = ({isHome}) => {
             {
                 name: "Cloud Advisory",
                 link: "/services/#cloud-advisory"
+            },
+            {
+                name: "Digital Twins",
+                link: "/services/#digital-twins"
             }
         ],
         "Solutions": [

@@ -13,7 +13,7 @@ const SingleService: React.FC<{ mdContent, title: string, img: string, identifie
         
     return (
         <Theme.ServiceContentContainer id={identifier}>
-            <Theme.mdContentContainer>
+            <Theme.mdContentContainer variant={img===null?'normal':'img'}>
                 <ScrollAnimation
                     animateIn='animate__flipInX'
                     animateOnce={true}
@@ -32,11 +32,22 @@ const SingleService: React.FC<{ mdContent, title: string, img: string, identifie
                     </ReactMarkdown>
                 </ScrollAnimation>
             </Theme.mdContentContainer>
-            {imgSrc!==null && 
-                <Theme.ImgBox style={{ width: '35vw', height: '20vw', marginLeft: '1vw', marginTop: 75 }}>
-                 
-                    <ParallaxProvider>
-                        <Parallax x={[-15, 15]}>
+            {imgSrc!==null && (
+                identifier === "cloud-advisory" ? (
+                    <Theme.ImgBox img='cloud'>
+                        <Parallax x={[12, -12]}>
+                            <Image
+                                priority
+                                src={imgSrc}
+                                height={500} 
+                                width={500}
+                                alt={img}
+                            />
+                        </Parallax>
+                    </Theme.ImgBox>
+                ) : (
+                    <Theme.ImgBox variant='dontKeep' style={{ width: '35vw', height: '20vw', marginLeft: '1vw', marginTop: 75 }}>
+                        <Parallax x={[-10, 10]}>
                             <Image
                                 priority
                                 src={imgSrc}
@@ -45,9 +56,11 @@ const SingleService: React.FC<{ mdContent, title: string, img: string, identifie
                                 alt={img}
                             />
                         </Parallax>
-                    </ParallaxProvider>
-                </Theme.ImgBox>
-            }
+                    </Theme.ImgBox>
+                )
+            )}
+
+                
         </Theme.ServiceContentContainer>
     );
 }

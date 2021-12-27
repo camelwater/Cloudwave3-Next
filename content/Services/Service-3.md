@@ -1,7 +1,7 @@
 ---
 title: Cloud Advisory Services
 id: cloud-advisory
-img: null
+img: cloud-tech.png
 ---
 
 ### Advisory Coverage
