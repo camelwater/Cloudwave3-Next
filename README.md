@@ -1,1 +1,1 @@
-Learning Next.js.
+Learning to build websites with Next.
