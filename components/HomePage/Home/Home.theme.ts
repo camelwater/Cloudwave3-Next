@@ -18,7 +18,7 @@ export const Container = styled('div', {
     '@media only screen and (max-width: 1280px)': {
       height: '90vh',
     },
-  })
+})
 
   export const IntroContainer = styled('div', {
     display: 'flex',
@@ -53,14 +53,31 @@ export const NameText = styled('h1', {
     display: 'flex',
     width: 'fit-content',
     fontFamily: '$main',
-    color: '$white',
+    color: '#e2e2e2',
     fontSize: 75,
     margin: '30px 0',
-
+    transition: '.15s linear',
+    cursor: 'cell',
     '@media only screen and (max-width: 425px)': {
         fontSize: 60
     },
     '@iPhone': {
         fontSize: 50
+    },
+    '&:hover': {
+      transform: 'scale(1.025, 1.025)'
     }
+})
+
+export const VideoContainer = styled('div', {
+  display: 'flex',
+  position: 'absolute',
+  zIndex: -99,
+  height: 'max-content',
+  width: 'max-content',
+  alignSelf: 'center',
+  '@media screen and (max-width: 700px)': {
+    maxHeight: 'fit-content',
+    maxWidth: 'fit-content',
+  }
 })

@@ -1,11 +1,14 @@
 import * as Theme from './Home.theme';
 import ScrollAnimation from 'react-animate-on-scroll';
 import React from 'react';
+import ReactPlayer from 'react-player/file';
 
 const HomeComponent: React.FC = () => {
     return (
         <Theme.Container id='home'>
+
             <Theme.IntroContainer>
+                
                 <ScrollAnimation
                     animateIn='animate__bounceInLeft'
                     delay={200}
@@ -20,8 +23,19 @@ const HomeComponent: React.FC = () => {
                 >
                     <Theme.IntroText>A company that&apos;s doing stuff</Theme.IntroText>
                 </ScrollAnimation>
+                <Theme.VideoContainer>
+                    <ReactPlayer
+                        url='/images/lines_video.mp4'
+                        playing={true}
+                        muted={true}
+                        loop={true}
+                        height='100%'
+                        width='100%'
+                    />
+                </Theme.VideoContainer>
             </Theme.IntroContainer>
         </Theme.Container>
+
     );
 }
 
