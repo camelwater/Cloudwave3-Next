@@ -25,10 +25,11 @@ const HomeComponent: React.FC = () => {
                 </ScrollAnimation>
                 <Theme.VideoContainer>
                     <video
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
+                        autoPlay={true}
+                        controls={false}
+                        muted={true}
+                        loop={true}
+                        playsInline={true}
                         src='/images/lines_video.mp4'
                         height='100%'
                         width='100%'
