@@ -26,10 +26,11 @@ const HomeComponent: React.FC = () => {
                 <Theme.VideoContainer>
                     <ReactPlayer
                         playing={true}
+                        volume={0}
                         muted={true}
                         loop={true}
                         playsinline={true}
-                        src='/images/lines_video.mp4'
+                        url='/images/lines_video.mp4'
                         height='100%'
                         width='100%'
                     ></ReactPlayer>
