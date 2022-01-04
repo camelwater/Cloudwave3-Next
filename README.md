@@ -1,1 +1,1 @@
-Learning to build websites with Next.
+Learning to build a website with Next.

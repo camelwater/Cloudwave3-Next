@@ -60,7 +60,7 @@ export const NameText = styled('h1', {
     color: '#e2e2e2',
     fontSize: 75,
     margin: '30px 0',
-    transition: '.15s linear',
+    transition: '.125s linear',
     cursor: 'cell',
     // '@media screen and (max-width: 700px)': {
     //   color: "$white"

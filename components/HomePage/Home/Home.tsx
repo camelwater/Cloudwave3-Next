@@ -27,6 +27,7 @@ const HomeComponent: React.FC = () => {
                     <ReactPlayer
                         url='/images/lines_video.mp4'
                         playing={true}
+                        volume={0}
                         muted={true}
                         loop={true}
                         playsinline={true}
