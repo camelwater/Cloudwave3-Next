@@ -30,7 +30,7 @@ const HomeComponent: React.FC = () => {
                         volume={0}
                         muted={true}
                         loop={true}
-                        playsinline={true}
+                        playsInline={true}
                         height='100%'
                         width='100%'
                     />
