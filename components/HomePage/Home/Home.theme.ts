@@ -62,9 +62,9 @@ export const NameText = styled('h1', {
     margin: '30px 0',
     transition: '.15s linear',
     cursor: 'cell',
-    '@media screen and (max-width: 700px)': {
-      color: "$white"
-    },
+    // '@media screen and (max-width: 700px)': {
+    //   color: "$white"
+    // },
     '@media only screen and (max-width: 425px)': {
         fontSize: 60
     },
@@ -84,7 +84,6 @@ export const VideoContainer = styled('div', {
   width: 'max-content',
   alignSelf: 'center',
   '@media screen and (max-width: 700px)': {
-    display: 'none',
     maxHeight: 'fit-content',
     maxWidth: '100vw',
   }
