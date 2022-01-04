@@ -24,16 +24,15 @@ const HomeComponent: React.FC = () => {
                     <Theme.IntroText>A company that&apos;s doing stuff</Theme.IntroText>
                 </ScrollAnimation>
                 <Theme.VideoContainer>
-                    <video
-                        autoPlay={true}
-                        controls={false}
+                    <ReactPlayer
+                        playing={true}
                         muted={true}
                         loop={true}
-                        playsInline={true}
+                        playsinline={true}
                         src='/images/lines_video.mp4'
                         height='100%'
                         width='100%'
-                    ></video>
+                    ></ReactPlayer>
                 </Theme.VideoContainer>
             </Theme.IntroContainer>
         </Theme.Container>
