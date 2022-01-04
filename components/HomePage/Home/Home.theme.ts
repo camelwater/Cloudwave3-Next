@@ -79,12 +79,12 @@ export const NameText = styled('h1', {
 export const VideoContainer = styled('div', {
   // display: 'flex',
   position: 'absolute',
-  zIndex: -99,
+  zIndex: -9,
   height: 'max-content',
   width: 'max-content',
   alignSelf: 'center',
   '@media screen and (max-width: 700px)': {
-    maxHeight: 'fit-content',
+    maxHeight: '100vw',
     maxWidth: '100vw',
   }
 })

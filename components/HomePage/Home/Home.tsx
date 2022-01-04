@@ -31,7 +31,7 @@ const HomeComponent: React.FC = () => {
                         muted={true}
                         loop={true}
                         // playsinline={true}
-                        fileConfig={{ attributes: { playsinline: true }}}
+                        // fileConfig={{ attributes: { playsinline: true }}}
                         height='100%'
                         width='100%'
                     />
