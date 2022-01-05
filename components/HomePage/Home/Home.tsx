@@ -33,7 +33,7 @@ const HomeComponent: React.FC = () => {
                         url='/images/lines_video.mp4'
                         height='100%'
                         width='100%'
-                    /> 
+                    />
                 </Theme.VideoContainer>
             </Theme.IntroContainer>
         </Theme.Container>

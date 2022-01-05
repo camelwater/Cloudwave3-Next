@@ -30,17 +30,29 @@ export const ServiceContainer = sstyled('div', {
     },
 })
 
+export const SingleServiceContainer = sstyled('div', {
+    display: 'flex',
+    flexDirection: 'column',
+    maxWidth: '85vw',
+    width: '100%',
+    marginLeft: '5vw',
+    '@iPadPro': {
+        marginLeft: '0',
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+})
+
 export const ServiceContentContainer = sstyled('div', {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
     // margin: '0 -100px',
     justifyContent: 'space-between',
-    aliignItems: 'center',
+    alignItems: 'center',
     width: '100%',
-    maxWidth: '85vw',
     '@iPadPro': {
-        margin: '0 30px',
+        // margin: '0 30px',
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -55,9 +67,9 @@ export const TitleText = sstyled('h1', {
     WebkitTextFillColor: 'transparent',
     fontSize: '$6',
     fontFamily: '$main',
-    margin: '60px 0 0 13vw',
+    margin: '60px 0 7rem 13vw',
     '@iPadPro': {
-        margin: '60px 0'
+        margin: '60px 0 10rem'
     }    
 })
 
@@ -93,12 +105,11 @@ export const ImgBox = sstyled('div', {
 
 
 export const mdContentContainer = sstyled('div', {
-
     color: '$white',
     display: 'flex',
     flexDirection: 'column',
     // margin: '50px 100px',
-    marginLeft: '5vw',
+    // marginLeft: '5vw',
     width: '100%',
     variants: {
         variant: {
@@ -141,7 +152,7 @@ export const mdContentContainer = sstyled('div', {
         alignText: 'center'
     },
     h2: {
-        marginTop: 100,
+        // marginTop: 100,
         marginBottom: 30,
         color: '$hover',
         fontSize: '$5',

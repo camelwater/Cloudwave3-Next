@@ -14,6 +14,7 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
         dropdownHover: '#050505',
         hover: 'GoldenRod',
         // hover: '#d4550c',
+        dividerColor: '#eeae4d',
         background: '#191919',
         navBackground: '#171717',
         dropdownBackground: '#141414',
@@ -62,6 +63,7 @@ export const lightTheme = createTheme(({
     dropdownBackground: '#f5f5f5',
     dropdownBorder: '#e0e0e0',
     hover: '#4c2bce',
+    dividerColor: '#785af1',
     dropdownHover: '#e9e9e9',
     highlight: '#2e2e2e30',
     gradient:

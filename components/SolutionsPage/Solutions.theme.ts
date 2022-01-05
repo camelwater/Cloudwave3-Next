@@ -8,7 +8,6 @@ export const Container = styled('div', {
     marginTop: 100,
     marginBottom: 100,
     justifyContent: 'center',
-    // maxWidth: '1500px',
     // alignItems: 'center',
     '@iPadPro': {
         margin: '100px 0',
@@ -38,10 +37,10 @@ export const SolutionContentContainer = styled('div', {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    borderTop: '1px solid $main',
+    // borderTop: '1px solid $main',
     justifyContent: 'space-between',
     alignItems: 'center',   
-    marginTop: 100,
+    // marginTop: 100,
     width: '100%',
     maxWidth: '75vw',
     '@iPadPro': {
@@ -62,7 +61,7 @@ export const TitleText = styled('h1', {
     WebkitTextFillColor: 'transparent',
     fontSize: '$6',
     fontFamily: '$main',
-    margin: '60px 0 0 13vw',
+    margin: '60px 0 10rem 13vw',
     '@iPadPro': {
         margin: '60px 0'
     }    
@@ -83,7 +82,8 @@ export const ImgContainer = styled('div', {
     marginTop: 150, 
     marginLeft: '3vw',
     '@iPadPro': {
-        marginLeft: 0,
+        margin: '0',
+        marginBottom: '2.5rem',
         width: '60vw',
         height: '40vw'
     }
@@ -97,7 +97,8 @@ export const ParallaxBackgroundImgContainer = styled(BaseImgContainer, {
     maxHeight: '450px',
     '@iPadPro': {
         width: '60vw',
-        height: '52vw'
+        height: '52vw',
+        marginBottom: '1.5rem'
     }
 
 })
@@ -176,7 +177,7 @@ export const mdContentContainer = styled('div', {
         alignText: 'left'
     },
     h2: {
-        marginTop: 100,
+        // marginTop: 100,
         marginBottom: 30,
         color: '$hover',
         fontSize: '$5'

@@ -14,15 +14,17 @@ const ServiceComponent: React.FC<{ contentData }> = ({ contentData }) => {
                 <Theme.TitleText>Services</Theme.TitleText>
             </ScrollAnimation>
             <Theme.ServiceContainer>
-            {contentData.map((serviceContent, index) => (
-                <SingleService 
-                    mdContent={serviceContent.content} 
-                    title={serviceContent.title} 
-                    img={serviceContent.img} 
-                    identifier={serviceContent.id} 
-                    key={index} 
-                />
-            ))}
+                {contentData.map((serviceContent, index) => (
+                    <SingleService 
+                        mdContent={serviceContent.content} 
+                        title={serviceContent.title} 
+                        img={serviceContent.img} 
+                        identifier={serviceContent.id} 
+                        key={index}
+                        idx={index}
+                    />
+                ))}
+                
             </Theme.ServiceContainer>
         </Theme.Container>
     );
