@@ -18,10 +18,10 @@ export const Container = styled('div', {
     '@media only screen and (max-width: 1280px)': {
       height: '90vh',
     },
-    '@media only screen and (max-width: 700px)': {
-      justifyContent: 'flex-start',
-      marginTop: '25vw'
-    }
+    // '@media only screen and (max-width: 700px)': {
+    //   justifyContent: 'flex-start',
+    //   marginTop: '25vw'
+    // }
 })
 
   export const IntroContainer = styled('div', {
@@ -62,9 +62,9 @@ export const NameText = styled('h1', {
     margin: '30px 0',
     transition: '.125s linear',
     cursor: 'cell',
-    // '@media screen and (max-width: 700px)': {
-    //   color: "$white"
-    // },
+    '@media screen and (max-width: 700px)': {
+      color: "$white"
+    },
     '@media only screen and (max-width: 425px)': {
         fontSize: 60
     },
@@ -84,6 +84,7 @@ export const VideoContainer = styled('div', {
   width: 'max-content',
   alignSelf: 'center',
   '@media screen and (max-width: 700px)': {
+    display: 'none',
     maxHeight: '100vw',
     maxWidth: '100vw',
   }
